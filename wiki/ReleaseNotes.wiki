@@ -1,6 +1,10 @@
 #labels Featured
 = Release Notes =
 
+=== 1.0.3 ===
+  * Value is no longer required. If no value is supplied, the token is removed entirely.
+  * Fixed inability to replace tokens spanning more than one line.
+
 === 1.0.2 ===
   * When using the outputFile parameter, if the base path does not exist it will be created.
 
