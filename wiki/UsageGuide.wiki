@@ -1,0 +1,40 @@
+#labels userguide
+= Usage Guide =
+
+Maven replacer plugin is a build plugin to replace content within a given file.
+
+|| Parameter || Required || Notes ||
+|| ignoreMissingFile || no (default: false) || Set to true to not fail build when file not found. First checks if file exists and exits without attempting to replace anything ||
+|| file || yes || Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path. This plugin first reads the entire content in and then replaces tokens. ||
+|| outputFile || no (default: input file) || When supplied, the input file is read and the final output after replacing tokens is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. ||
+|| regex || no (default: true) || Indicates if the token should be located with regular expressions. This should be set to false if the token contains regex characters which may miss the desired tokens or even replace the wrong tokens. ||
+|| token || yes || The text fragment to replace within the given file. This may be or may not be  a regular expression (see regex notes above). ||
+|| value || no (default: empty) || The text fragment to be written over any found tokens. If no value is given, the tokens found are replaced with nothing (effectively removing any  tokens found). ||
+
+e.g. 
+{{{<plugin>
+    <groupId>bakersoftware</groupId>
+    <artifactId>maven-replacer-plugin</artifactId>
+    <version>1.0.3</version>
+    <executions>
+        <execution>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>replace</goal>
+            </goals>
+            <configuration>
+                <ignoreMissingFile>true</ignoreMissingFile>
+                <file>target/someapp/jsp/helloWorld.jsp</file>
+                <outputFile>
+                    target/someapp/jsp/helloWorld-updated.jsp
+                </outputFile>
+                <regex>false</regex>
+                <token>$BUILD_NUMBER$</token>
+                <value>${buildNumber}</value>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>}}}
+
+The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR. 
+You should think carefully about how you package artifacts and when to replace content (which will likely be replaced within the target directory, and hence be largely in the control of the packaging plugin).
