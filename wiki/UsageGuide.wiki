@@ -7,7 +7,7 @@ Maven replacer plugin is a build plugin to replace content within a given file.
 
 <table border="1" width="500">
 <tr>
-<th>Parameter</th><th width="100">Is required</th><th>Notes</th>
+<th width="100">Parameter</th><th width="150">Is required</th><th>Notes</th>
 </tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build when file not found. First checks if file exists and exits without attempting to replace anything</td></tr>
