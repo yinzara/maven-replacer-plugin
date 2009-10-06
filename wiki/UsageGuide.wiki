@@ -5,7 +5,7 @@
 
 <table border="1" width="700" cellpadding="5">
 <tr>
-<th width="100">Parameter</th><th width="150">Is required</th><th>Description</th>
+<th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
 </tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything</td></tr>
