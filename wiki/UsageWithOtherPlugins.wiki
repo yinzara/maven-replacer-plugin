@@ -17,9 +17,9 @@ This plugin can be used with other plugins for some useful results such as updat
             </goals>
             <configuration>
                 <ignoreMissingFile>true</ignoreMissingFile>
-                <file>target/someapp/jsp/helloWorld.jsp</file>
+                <file>target/${project.artifactId}/jsp/helloWorld.jsp</file>
                 <outputFile>
-                    target/someapp/jsp/helloWorld-updated.jsp
+                    target/${project.artifactId}/jsp/helloWorld-updated.jsp
                 </outputFile>
                 <regex>false</regex>
                 <token>$BUILD_NUMBER$</token>
