@@ -3,7 +3,7 @@
 
 = Installation Guide =
 
-Download the latest binary from the downloads tab and use mvn install. e.g.
+Download the latest binary from [http://code.google.com/p/maven-replacer-plugin/downloads/list downloads] and use mvn install. e.g.
 {{{
 mvn install:install-file -Dfile=/path/to/file/maven-replacer-plugin-1.0.3.jar -DgroupId=bakersoftware \ 
 -DartifactId=maven-replacer-plugin -Dversion=1.0.3 -Dpackaging=jar -DgeneratePom=true
