@@ -1,4 +1,6 @@
+#summary Release notes for each release (enhancements, bug fixes, etc)
 #labels Featured
+
 = Release Notes =
 
 === 1.0.3 ===
