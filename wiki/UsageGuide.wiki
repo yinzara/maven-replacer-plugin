@@ -1,4 +1,6 @@
+#summary Usage guide (how to use and parameter deffinations)
 #labels userguide
+
 = Usage Guide =
 
 Maven replacer plugin is a build plugin to replace content within a given file.
