@@ -23,29 +23,35 @@
 
 e.g. 
 {{{
-<plugin>
-    <groupId>bakersoftware</groupId>
-    <artifactId>maven-replacer-plugin</artifactId>
-    <version>1.0.3</version>
-    <executions>
-        <execution>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>replace</goal>
-            </goals>
-            <configuration>
-                <ignoreMissingFile>true</ignoreMissingFile>
-                <file>target/someapp/jsp/helloWorld.jsp</file>
-                <outputFile>
-                    target/someapp/jsp/helloWorld-updated.jsp
-                </outputFile>
-                <regex>false</regex>
-                <token>$BUILD_NUMBER$</token>
-                <value>${buildNumber}</value>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>bakersoftware</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.0.3</version>
+            <executions>
+                <execution>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>replace</goal>
+                    </goals>
+                    <configuration>
+                        <ignoreMissingFile>true</ignoreMissingFile>
+                        <file>target/someapp/jsp/helloWorld.jsp</file>
+                        <outputFile>
+                            target/someapp/jsp/helloWorld-updated.jsp
+                        </outputFile>
+                        <regex>false</regex>
+                        <token>$BUILD_NUMBER$</token>
+                        <value>${buildNumber}</value>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
 }}}
 
 The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR. In this case you may need to use war:exploded, followed by package, so that the text can be replaced before packing into the WAR artifact.
