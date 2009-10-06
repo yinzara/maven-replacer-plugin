@@ -5,7 +5,7 @@
 
 Maven replacer plugin is a build plugin to replace content within a given file.
 
-<table>
+<table border="1" width="500">
 <tr>
 <th>Parameter</th><th>Is required</th><th>Notes</th>
 </tr>
