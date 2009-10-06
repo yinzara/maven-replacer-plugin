@@ -4,11 +4,12 @@
 = Installation Guide =
 
 Download the latest binary from the downloads tab and use mvn install. e.g.
-
+{{{
 mvn install:install-file -Dfile=/path/to/file/maven-replacer-plugin-1.0.3.jar -DgroupId=bakersoftware \ 
 -DartifactId=maven-replacer-plugin -Dversion=1.0.3 -Dpackaging=jar -DgeneratePom=true
-Or you can add the plugin repository to your settings.xml or pom.xml:
+}}}
 
+Or you can add the plugin repository to your settings.xml or pom.xml:
 {{{
 <pluginRepositories>
     <pluginRepository>
