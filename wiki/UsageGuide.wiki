@@ -5,7 +5,7 @@
 
 Maven replacer plugin is a build plugin to replace content within a given file.
 
-|| * Parameter * || * Is required * || * Notes * ||
+|| * Parameter * || * Is required    * || * Notes * ||
 || ignoreMissingFile || no (default: false) || Set to true to not fail build when file not found. First checks if file exists and exits without attempting to replace anything ||
 || file || yes || Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path. This plugin first reads the entire content in and then replaces tokens. ||
 || outputFile || no (default: file) || When supplied, the input file is read and the final output after replacing tokens is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. ||
