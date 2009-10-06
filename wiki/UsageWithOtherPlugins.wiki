@@ -1,3 +1,4 @@
+#labels other,buildnumber,war
 = Usage with other plugins =
 
 This plugin can be used with other plugins for some useful results such as updating a project file with the current revision number:
