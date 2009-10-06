@@ -1,0 +1,22 @@
+#summary How to install this plugin into your local/corporate repository
+#labels installation,guide
+
+= Installation Guide =
+
+Download the latest binary from the downloads tab and use mvn install. e.g.
+
+mvn install:install-file -Dfile=/path/to/file/maven-replacer-plugin-1.0.3.jar -DgroupId=bakersoftware \ 
+-DartifactId=maven-replacer-plugin -Dversion=1.0.3 -Dpackaging=jar -DgeneratePom=true
+Or you can add the plugin repository to your settings.xml or pom.xml:
+
+<pluginRepositories>
+    <pluginRepository>
+        <id>maven-replacer-plugin reposoitory</id>
+        <url>
+            http://maven-replacer-plugin.googlecode.com/svn/release-repo
+        </url>
+    </pluginRepository>
+</pluginRepositories>
+To install the plugin by building locally, check out the latest copy from trunk (or a tag) and use mvn install (which should build and install the plugin).
+
+To install into Nexus, either add the repository or upload the JAR to your 3rd party libraries.
