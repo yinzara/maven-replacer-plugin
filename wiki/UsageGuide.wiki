@@ -12,7 +12,8 @@ Maven replacer plugin is a build plugin to replace content within a given file.
 || value || no (default: empty) || The text fragment to be written over any found tokens. If no value is given, the tokens found are replaced with nothing (effectively removing any  tokens found). ||
 
 e.g. 
-{{{<plugin>
+{{{
+<plugin>
     <groupId>bakersoftware</groupId>
     <artifactId>maven-replacer-plugin</artifactId>
     <version>1.0.3</version>
@@ -34,7 +35,8 @@ e.g.
             </configuration>
         </execution>
     </executions>
-</plugin>}}}
+</plugin>
+}}}
 
 The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR. 
 You should think carefully about how you package artifacts and when to replace content (which will likely be replaced within the target directory, and hence be largely in the control of the packaging plugin).
