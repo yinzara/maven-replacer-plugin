@@ -1,4 +1,4 @@
-#summary Integration with other plugins guide
+#summary Guide to integration with other plugins
 #labels other,buildnumber,war
 
 = Usage with other plugins =
