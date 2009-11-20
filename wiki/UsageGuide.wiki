@@ -3,7 +3,7 @@
 
 = Usage Guide =
 
-<table border="1" width="700" cellpadding="5">
+<table border="1" width="800" cellpadding="5">
 <tr>
 <th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
 </tr>
