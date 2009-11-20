@@ -12,7 +12,7 @@
   * Fixed Issue 13
 
 === 1.0.3 ===
-  * Value is no longer required. If no value is supplied, the token is removed entirely.
+  * Value is no longer required. If no value is supplied, the token is removed entirely  (Issue 10).
   * Fixed inability to replace tokens spanning more than one line (Issue 10).
 
 === 1.0.2 ===
