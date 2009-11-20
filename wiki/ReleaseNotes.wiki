@@ -5,6 +5,8 @@
 
 === 1.1 ===
   * *groupId changed to com.google.code.maven-replacer-plugin to comply with standard Maven repository which will enable this plugin to be uploaded to the main repo.*
+  * Now supports suppling a file containing the token to match against (Issue 12). This is useful when the token is long or should not be shown in your project pom.
+  * Now supports suppling a file containing the value to replace the token with (Issue 12). This is useful when the value is long or should not be shown in your project pom.
   * Fixed Issue 16
   * Fixed Issue 13
 
