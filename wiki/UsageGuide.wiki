@@ -31,7 +31,7 @@
 <td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom.</td></tr>
 </table>
 
-Note: Either a token, tokenFile or tokenValueMap is required.
+Note: Either a token, tokenFile or tokenValueMap is required. An execution should not contain more than one of these.
 
 e.g. 
 {{{
