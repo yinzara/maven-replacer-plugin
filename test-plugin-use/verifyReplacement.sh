@@ -3,13 +3,10 @@
 echo "Executing clean and replacement"
 mvn clean test
 
-#need to remove this file as it is not supposed to be tested
-rm -f target/classes/multiple-tokens-for-map.txt
-
 echo ""
 echo "Checking contents"
 for f in target/classes/*.txt; do
-	if [ `grep -c value $f` = "1" ]; then
+	if [ `grep -c value $f` -ge "1" ]; then
 		echo "$f value okay"
 	else
 		echo "$f failed"

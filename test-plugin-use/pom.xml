@@ -126,7 +126,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>tokenValueMap</id>
+						<id>outputfile-tokenValueMap</id>
 						<phase>test</phase>
 						<goals>
 							<goal>replace</goal>
@@ -135,6 +135,17 @@
 							<file>target/classes/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
 							<outputFile>target/multiple-tokens-for-map-outputfile.txt</outputFile>
+						</configuration>
+					</execution>
+					<execution>
+						<id>tokenValueMap</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/multiple-tokens-for-map.txt</file>
+							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
 						</configuration>
 					</execution>
 				</executions>
