@@ -23,8 +23,15 @@
 <td>token</td><td>yes</td><td>The text fragment to replace within the given file. This may be or may not be  a regular expression (see regex notes above).</td></tr>
 <tr>
 <td>value</td><td>no (default: empty)</td><td>The text fragment to be written over any found tokens. If no value is given, the tokens found are replaced with nothing (effectively removing any  tokens found).</td></tr>
+<tr>
+<td>tokenValueMap</td><td>no</td><td>A file containing tokens and their respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to be replaced. Each line should be in the format: token=value or token value (space separated).</td></tr>
+<tr>
+<td>tokenFile</td><td>no</td><td>A file containing a token to be replaced. May be multiple words or lines. This is useful if you do not wish to expose the token within your pom.</td></tr>
+<tr>
+<td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom.</td></tr>
 </table>
 
+Note: Either a token, tokenFile or tokenValueMap is required.
 e.g. 
 {{{
 <build>
@@ -59,7 +66,7 @@ e.g.
                     </goals>
                     <configuration>
                         <file>target/classes/database.properties</file>
-                        <tokenValueMap>etc/${environment}/database.conf/tokenValueMap>
+                        <tokenValueMap>etc/${environment}/database.conf</tokenValueMap>
                     </configuration>
                 </execution>
             </executions>
