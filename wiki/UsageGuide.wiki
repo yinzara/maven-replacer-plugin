@@ -10,9 +10,9 @@
 <tr>
 <td>phase</td><td>no (default: compile)</td><td>This plugin will execute during the compile phase, however, the desired phase can easily be defined.</td></tr>
 <tr>
-<td>file</td><td>yes</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path. This plugin first reads the entire content in and then replaces tokens.</td></tr>
-<tr>
 <td>goal</td><td>yes</td><td>Always "replace".</td></tr>
+<tr>
+<td>file</td><td>yes</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path. This plugin first reads the entire content in and then replaces tokens.</td></tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything</td></tr>
 <tr>
