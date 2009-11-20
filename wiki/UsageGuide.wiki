@@ -81,3 +81,5 @@ The phase and time of execution depends largely on the desired use and the type 
 
 You should think carefully about how you package artifacts and when to replace content (which will likely be replaced within the target directory, and hence be largely in the control of the packaging plugin).
 You may end up trying multiple builds just to get the phase and build command right.
+
+Complete examples can be found in the plugin's test project. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
