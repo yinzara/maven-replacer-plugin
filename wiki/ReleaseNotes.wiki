@@ -3,6 +3,11 @@
 
 = Release Notes =
 
+=== 1.1 ===
+  * *groupId changed to com.google.code.maven-replacer-plugin to comply with standard Maven repository which will enable this plugin to be uploaded to the main repo.*
+  * 
+  * Fixed [Defect-13]
+
 === 1.0.3 ===
   * Value is no longer required. If no value is supplied, the token is removed entirely.
   * Fixed inability to replace tokens spanning more than one line.
