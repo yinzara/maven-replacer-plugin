@@ -13,11 +13,11 @@
 
 === 1.0.3 ===
   * Value is no longer required. If no value is supplied, the token is removed entirely.
-  * Fixed inability to replace tokens spanning more than one line.
+  * Fixed inability to replace tokens spanning more than one line (Issue 10).
 
 === 1.0.2 ===
   * When using the outputFile parameter, if the base path does not exist it will be created.
 
 === 1.0.1 ===
   * Added optional {{{<regex>[true, false]</regex>}}} parameter. Set to true when token contains a regular expression. Set to false if you do not want regular expressions considered within a token. (If not supplied, regex will be considered by default).
-  * Added optional {{{<outputFile>some file</outputFile>}}} parameter. The modified file contents are written to this file if specified. (If not supplied, replace will overwrite input file).
+  * Added optional {{{<outputFile>some file</outputFile>}}} parameter. The modified file contents are written to this file if specified. (If not supplied, replace will overwrite input file) (Issue 7).
