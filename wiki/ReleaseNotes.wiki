@@ -19,5 +19,5 @@
   * When using the outputFile parameter, if the base path does not exist it will be created (Issue 9).
 
 === 1.0.1 ===
-  * Added optional {{{<regex>[true, false]</regex>}}} parameter. Set to true when token contains a regular expression. Set to false if you do not want regular expressions considered within a token. (If not supplied, regex will be considered by default).
+  * Added optional {{{<regex>[true, false]</regex>}}} parameter. Set to true when token contains a regular expression. Set to false if you do not want regular expressions considered within a token. (If not supplied, regex will be considered by default) (Issue 8).
   * Added optional {{{<outputFile>some file</outputFile>}}} parameter. The modified file contents are written to this file if specified. (If not supplied, replace will overwrite input file) (Issue 7).
