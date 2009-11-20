@@ -71,7 +71,7 @@
 						<configuration>
 							<file>target/classes/simple.txt</file>
 							<token>token</token>
-							<outputFile>target/classes/simple-outputfile-remove.txt</outputFile>
+							<outputFile>target/simple-outputfile-remove.txt</outputFile>
 						</configuration>
 					</execution>
 					<execution>
