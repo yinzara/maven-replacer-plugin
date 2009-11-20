@@ -59,7 +59,7 @@ e.g.
                     </goals>
                     <configuration>
                         <file>target/classes/database.properties</file>
-                        <tokenValueMap>etc/${environment}/database.properties</tokenValueMap>
+                        <tokenValueMap>etc/${environment}/database.conf/tokenValueMap>
                     </configuration>
                 </execution>
             </executions>
