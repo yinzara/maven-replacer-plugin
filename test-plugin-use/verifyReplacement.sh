@@ -10,7 +10,7 @@ echo ""
 echo "Checking contents"
 for f in target/classes/*.txt; do
 	if [ `grep -c value $f` = "1" ]; then
-		echo "$f okay"
+		echo "$f value okay"
 	else
 		echo "$f failed"
 		exit 1
@@ -32,7 +32,7 @@ else
 fi
 
 if [ `grep -c token target/multiple-tokens-for-map-outputfile.txt` = "0" ]; then
-	echo "target/multiple-tokens-for-map-outputfile.txt okay"
+	echo "target/multiple-tokens-for-map-outputfile.txt no longer contains tokens"
 else
 	echo "target/multiple-tokens-for-map-outputfile.txt failed"
 	exit 1
