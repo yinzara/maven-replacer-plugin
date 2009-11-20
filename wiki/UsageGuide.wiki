@@ -51,6 +51,17 @@ e.g.
                         <value>${buildNumber}</value>
                     </configuration>
                 </execution>
+                <execution>
+                    <id>another replacement</id>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>replace</goal>
+                    </goals>
+                    <configuration>
+                        <file>target/classes/database.properties</file>
+                        <tokenValueMap>etc/${environment}/database.properties</tokenValueMap>
+                    </configuration>
+                </execution>
             </executions>
         </plugin>
         ...
