@@ -31,9 +31,9 @@ e.g.
     <plugins>
         ...
         <plugin>
-            <groupId>bakersoftware</groupId>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.0.3</version>
+            <version>1.1</version>
             <executions>
                 <execution>
                     <phase>prepare-package</phase>
