@@ -20,13 +20,13 @@
 <tr>
 <td>regex</td><td>no (default: true)</td><td>Indicates if the token should be located with regular expressions. This should be set to false if the token contains regex characters which may miss the desired tokens or even replace the wrong tokens.</td></tr>
 <tr>
-<td>token</td><td>yes</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
+<td>token</td><td>(see note below)</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
 <tr>
 <td>value</td><td>no (default: empty)</td><td>The text to be written over any found tokens. If no value is given, the tokens found are replaced with an empty string (effectively removing any tokens found).</td></tr>
 <tr>
-<td>tokenValueMap</td><td>no</td><td>A file containing tokens and respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to have replaced. Each line should be in the format: "token=value" or "token value" (without quotations).</td></tr>
+<td>tokenValueMap</td><td>(see note below)</td><td>A file containing tokens and respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to have replaced. Each line should be in the format: "token=value" or "token value" (without quotations).</td></tr>
 <tr>
-<td>tokenFile</td><td>no</td><td>A file containing the token to be replaced. May be multiple words or lines. This is useful if you do not wish to expose the token within your pom or the token is long.</td></tr>
+<td>tokenFile</td><td>(see note below)</td><td>A file containing the token to be replaced. May be multiple words or lines. This is useful if you do not wish to expose the token within your pom or the token is long.</td></tr>
 <tr>
 <td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom or the value is long.</td></tr>
 </table>
