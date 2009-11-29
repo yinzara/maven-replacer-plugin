@@ -79,7 +79,9 @@ e.g.
 </build>
 }}}
 
+---
 Notes on some difficulties integrating maven-replacer-plugin into your build:
+
 The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR. In this case you may need to use war:exploded, followed by package, so that the text can be replaced before packing into the WAR artifact.
 
 You should think carefully about how you package artifacts and when to replace content (which will likely be replaced within the target directory, and hence be largely in the control of the packaging plugin).
