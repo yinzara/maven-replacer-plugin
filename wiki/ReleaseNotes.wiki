@@ -1,4 +1,4 @@
-#summary Release notes for each release (enhancements, bug fixes, etc)
+#summary Release notes (enhancements, bug fixes, etc)
 #labels Featured,Releasenots
 
 = Release Notes =
