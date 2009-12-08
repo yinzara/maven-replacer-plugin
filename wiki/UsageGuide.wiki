@@ -81,4 +81,4 @@ e.g.
 
 Notes on some difficulties integrating maven-replacer-plugin into your build:
 
-The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR (See [UsageWithOtherPlugins|Usage with other plugins]).
+The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR (See [UsageWithOtherPlugins Usage with other plugins]).
