@@ -81,8 +81,4 @@ e.g.
 
 Notes on some difficulties integrating maven-replacer-plugin into your build:
 
-The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR. In this case you may need to use war:exploded, followed by package, so that the text can be replaced before packing into the WAR artifact.
-
-You should think carefully about how you package artifacts and when to replace content (which will likely be replaced within the target directory, and hence be largely in the control of the packaging plugin).
-Unfortunately, due to how the various Maven packing plugins function (especially the war plugin), you may have to try multiple build configurations to fit the text replacement in.
-Using "war:exploded" followed by "package" on your build will allow text replacement on the exploded war contents before it is packaged.
+The phase and time of execution depends largely on the desired use and the type of packaging. There can be issues with WAR packaging and replacing content at the right time to be included up by the WAR (See [UsageWithOtherPlugins].
