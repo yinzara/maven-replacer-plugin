@@ -27,3 +27,7 @@ Then run:
 {{{
 mvn clean war:exploded package
 }}}
+
+===Why do we have to use war:exploded and then package?:===
+Currently, the replacer plugin needs access to a target resource *before* it is packaged into an archive. However, standard WAR packaging does not expose web resources (anything under src/main/webapp) for use in other plugins and runs as a single execution.
+Fortunately, we can use war:exploded on the command line to copy these resources earlier in the build lifecycle so that they can be used by the maven-replacer-plugin. The standard package usage will then use the modified web resources when creating the WAR artifact.
