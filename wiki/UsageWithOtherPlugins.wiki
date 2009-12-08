@@ -16,7 +16,7 @@
             </goals>
             <configuration>
                 <file>target/${project.build.finalName}/WEB-INF/helloWorld.jsp</file>
-                <token>@TOKEN@</token>
+                <token>TOKEN</token>
                 <value>VALUE</value>
             </configuration>
         </execution>
