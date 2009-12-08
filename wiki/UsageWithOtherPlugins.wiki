@@ -1,9 +1,8 @@
 #summary Guide to integration with other plugins
-#labels other,buildnumber,war
+#labels other,package,war
 
-= Usage with other plugins =
+= Usage when building WARs =
 
-This plugin can be used with other plugins for some useful results such as updating a project file with the current revision number:
 {{{
 <plugin>
     <groupId>com.google.code.maven-replacer-plugin</groupId>
@@ -16,52 +15,15 @@ This plugin can be used with other plugins for some useful results such as updat
                 <goal>replace</goal>
             </goals>
             <configuration>
-                <ignoreMissingFile>true</ignoreMissingFile>
-                <file>target/${project.artifactId}/jsp/helloWorld.jsp</file>
-                <outputFile>
-                    target/${project.artifactId}/jsp/helloWorld-updated.jsp
-                </outputFile>
-                <regex>false</regex>
-                <token>$BUILD_NUMBER$</token>
-                <value>${buildNumber}</value>
+                <file>target/${project.build.finalName}/WEB-INF/helloWorld.jsp</file>
+                <token>@TOKEN@</token>
+                <value>VALUE</value>
             </configuration>
         </execution>
     </executions>
 </plugin>
-<plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>buildnumber-maven-plugin</artifactId>
-    <version>1.0-beta-2</version>
-    <executions>
-        <execution>
-            <phase>verify</phase>
-            <goals>
-                <goal>create</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-        <doCheck>false</doCheck>
-        <doUpdate>true</doUpdate>
-    </configuration>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-scm-plugin</artifactId>
-    <version>1.1</version>
-    <configuration>
-        <connectionType>connection</connectionType>
-    </configuration>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>2.1-alpha-2</version>
-</plugin>
 }}}
 Then run:
 {{{
-mvn clean buildnumber:create war:exploded package
+mvn clean war:exploded package
 }}}
-The helloWorld.jsp will have the $BUILD_NUMBER$ token replaced by the current SCM revision number, inside the packaged war.
-Note the token contains regular expression characters (i.e. "$"), for this example we do not want to consider regular expressions, so the tag {{{<regex>false</regex>}}} is given.
