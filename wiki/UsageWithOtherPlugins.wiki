@@ -1,4 +1,4 @@
-#summary Guide to integration with other plugins
+#summary Guide to integration with other plugins (war packaging)
 #labels other,package,war
 
 = Usage when building WARs =
