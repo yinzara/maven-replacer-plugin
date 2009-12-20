@@ -21,3 +21,12 @@
 === 1.0.1 - August 15th, 2009 ===
   * Added optional {{{<regex>[true, false]</regex>}}} parameter. Set to true when token contains a regular expression. Set to false if you do not want regular expressions considered within a token. (If not supplied, regex will be considered by default) (Issue 8).
   * Added optional {{{<outputFile>some file</outputFile>}}} parameter. The modified file contents are written to this file if specified. (If not supplied, replace will overwrite input file) (Issue 7).
+
+=== 1.0.0 - July 13th, 2009 ===
+  * Added optional ability to skip replacement task if input file not found so it does not break the build. (Issue 4).
+
+=== 0.0.9 - March 30th, 2009 ===
+  * Fixed bug where files that were replaced did not preserve line feeds. (Issue 1).
+
+=== 0.0.8 - March 6th, 2009 ===
+  * First public release.
