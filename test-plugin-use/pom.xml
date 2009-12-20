@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-				<version>1.1</version>
+				<version>1.2</version>
 				<executions>
 					<execution>
 						<id>regex</id>
@@ -146,6 +146,20 @@
 						<configuration>
 							<file>target/classes/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
+						</configuration>
+					</execution>
+					<execution>
+						<id>multiple-files</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/classes/**/multiple-files*.txt</include>
+							</includes>
+							<token>token</token>
+							<value>value</value>
 						</configuration>
 					</execution>
 				</executions>

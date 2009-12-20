@@ -21,6 +21,22 @@ for f in target/classes/*.txt; do
 	fi
 done
 
+for f in target/classes/nesteddir/*.txt; do
+	if [ `grep -c value $f` -ge "1" ]; then
+		echo "$f value okay"
+	else
+		echo "$f failed"
+		exit 1
+	fi
+	
+	if [ `grep -c token $f` = "0" ]; then
+		echo "$f no longer contains tokens"
+	else
+		echo "$f failed"
+		exit 1
+	fi
+done
+
 if [ `grep -c token target/simple-outputfile-remove.txt` = "0" ]; then
 	echo "target/simple-outputfile-remove.txt okay"
 else
