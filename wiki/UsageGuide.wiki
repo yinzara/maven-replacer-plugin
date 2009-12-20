@@ -1,4 +1,4 @@
-#summary Usage guide (how to use and parameter deffinations)
+#summary Usage guide (how to use and parameter definations)
 #labels userguide
 
 = Usage Guide =
