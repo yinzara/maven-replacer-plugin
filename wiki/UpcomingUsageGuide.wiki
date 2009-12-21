@@ -11,9 +11,9 @@
 <tr>
 <td>goal</td><td>yes</td><td>Always "replace".</td></tr>
 <tr>
-<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties}}}) </td></tr>
+<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
 <tr>
-<td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format ({{{**/directory/do-not-replace.properties}}}). The files replaced will be derived from the list of includes and excludes.</td></tr>
+<td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
 <tr>
 <td>file</td><td>(see note below)</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
 <tr>
