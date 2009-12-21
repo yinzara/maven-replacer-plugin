@@ -3,6 +3,9 @@
 
 = Release Notes =
 
+=== 1.2 Release Candidate 1 - December 21st, 2009 ===
+  * Added ability to supply a list of includes/excludes for multiple file replacement. This is in the standard Ant format (Issue 5). See [UpcomingUsageGuide Upcoming Usage Guide].
+
 === 1.1 - November 19th, 2009 ===
   * *groupId changed to com.google.code.maven-replacer-plugin to comply with standard Maven repository which will enable this plugin to be uploaded to the main repo.* (Issue 17)
   * Added ability to supply a tokenValueMap (Issue 18). A tokenValueMap is a supplied file which contains a list of tokens and their respective values to replace with. This allows a file to have different tokens replaced with different values in a single execution. This feature is useful if your file contains several different properties to be replaced.
