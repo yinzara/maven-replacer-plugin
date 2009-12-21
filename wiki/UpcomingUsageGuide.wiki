@@ -38,10 +38,10 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 
 Note: Either a token, tokenFile or tokenValueMap is required. An execution should not contain more than one of these.
 
-Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
-
 ----
 ===Examples===
+Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
+
 Single regex file replacement with output file: 
 {{{
 <build>
