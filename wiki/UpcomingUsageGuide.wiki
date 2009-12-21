@@ -1,4 +1,5 @@
 #summary Usage guide (how to use and parameter definitions)
+#labels releasecandidate,usage,upcoming
 
 = Upcoming Usage Guide (for release candidates) =
 
