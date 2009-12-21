@@ -50,7 +50,7 @@ Single regex file replacement with output file:
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.1</version>
+            <version>1.2-RC1</version>
             <executions>
                 <execution>
                     <phase>prepare-package</phase>
@@ -83,7 +83,7 @@ Multiple file replacement:
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.1</version>
+            <version>1.2-RC1</version>
             <executions>                
                 <execution>
                     <phase>prepare-package</phase>
@@ -116,7 +116,7 @@ Single file replacement using a tokenValueMap:
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.1</version>
+            <version>1.2-RC1</version>
             <executions>                
                 <execution>
                     <phase>prepare-package</phase>
