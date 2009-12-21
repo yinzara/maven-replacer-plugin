@@ -40,7 +40,7 @@ Note: Either a token, tokenFile or tokenValueMap is required. An execution shoul
 
 Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
 
-e.g. 
+Single regex file replacement with output file example. 
 {{{
 <build>
     <plugins>
@@ -66,8 +66,24 @@ e.g.
                         <value>${buildNumber}</value>
                     </configuration>
                 </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+}}}
+
+Multiple file replacement example:
+{{{
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.1</version>
+            <executions>                
                 <execution>
-                    <id>multiple replacements</id>
                     <phase>prepare-package</phase>
                     <goals>
                         <goal>replace</goal>
@@ -83,8 +99,24 @@ e.g.
                         <value>VALUE</value>
                     </configuration>
                 </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+}}}
+
+Single file replacement using a tokenValueMap example:
+{{{
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.1</version>
+            <executions>                
                 <execution>
-                    <id>another replacement</id>
                     <phase>prepare-package</phase>
                     <goals>
                         <goal>replace</goal>
