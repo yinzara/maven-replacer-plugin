@@ -11,7 +11,7 @@
 <tr>
 <td>goal</td><td>yes</td><td>Always "replace".</td></tr>
 <tr>
-<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (i.e. **/directory/*.properties) </td></tr>
+<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (i.e. \**/directory/\*.properties) </td></tr>
 <tr>
 <td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (i.e. **/directory/do-not-replace*.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
 <tr>
