@@ -1,6 +1,0 @@
-#summary Usage guide (how to use and parameter definitions)
-#labels releasecandidate,usage,upcoming,userguide
-
-= Upcoming Usage Guide (for release candidates) =
-
-*There are no current release candidates*
