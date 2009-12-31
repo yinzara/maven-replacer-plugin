@@ -12,7 +12,7 @@
   * Added ability to supply a tokenValueMap (Issue 18). A tokenValueMap is a supplied file which contains a list of tokens and their respective values to replace with. This allows a file to have different tokens replaced with different values in a single execution. This feature is useful if your file contains several different properties to be replaced.
   * Now supports suppling a file containing the token to match against (Issue 12). This is useful when the token is long or should not be shown in your project pom.
   * Now supports suppling a file containing the value to replace the token with (Issue 12). This is useful when the value is long or should not be shown in your project pom.
-  * Fixed Issue 16
+  * Fixed Windows path handling (Issue 16)
   * Fixed Issue 13
 
 === 1.0.3 - October 3rd, 2009 ===
