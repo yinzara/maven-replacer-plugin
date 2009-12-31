@@ -12,11 +12,15 @@
 <tr>
 <td>goal</td><td>yes</td><td>Always "replace".</td></tr>
 <tr>
-<td>file</td><td>yes</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
+<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
+<tr>
+<td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
+<tr>
+<td>file</td><td>(see note below)</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything.</td></tr>
 <tr>
-<td>outputFile</td><td>no (default: file)</td><td>The input file is read and the final output (after replacing tokens) is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten.</td></tr>
+<td>outputFile</td><td>no (default: file)</td><td>The input file is read and the final output (after replacing tokens) is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. You should not use outputFile when using a list of includes.</td></tr>
 <tr>
 <td>regex</td><td>no (default: true)</td><td>Indicates if the token should be located with regular expressions. This should be set to false if the token contains regex characters which may miss the desired tokens or even replace the wrong tokens.</td></tr>
 <tr>
@@ -31,11 +35,15 @@
 <td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom or the value is long.</td></tr>
 </table>
 
+Note: You must either supply a file, or list of includes (excludes are optional).
+
 Note: Either a token, tokenFile or tokenValueMap is required. An execution should not contain more than one of these.
 
+----
+===Examples===
 Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
 
-e.g. 
+Single regex file replacement with output file: 
 {{{
 <build>
     <plugins>
@@ -43,7 +51,7 @@ e.g.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
             <executions>
                 <execution>
                     <phase>prepare-package</phase>
@@ -61,8 +69,57 @@ e.g.
                         <value>${buildNumber}</value>
                     </configuration>
                 </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+}}}
+
+Multiple file replacement:
+{{{
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.2</version>
+            <executions>                
                 <execution>
-                    <id>another replacement</id>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>replace</goal>
+                    </goals>
+                    <configuration>
+                        <includes>
+                            <include>target/**/replace-me.*</include>
+                        </includes>
+                        <excludes>
+                            <exclude>target/**/do-not-replace-me.*</exclude>
+                        </excludes>
+                        <token>TOKEN</token>
+                        <value>VALUE</value>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+}}}
+
+Single file replacement using a tokenValueMap:
+{{{
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.2</version>
+            <executions>                
+                <execution>
                     <phase>prepare-package</phase>
                     <goals>
                         <goal>replace</goal>
