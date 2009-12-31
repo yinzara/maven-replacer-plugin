@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-				<version>1.2</version>
+				<version>1.2-RC1</version>
 				<executions>
 					<execution>
 						<id>regex</id>
@@ -158,6 +158,9 @@
 							<includes>
 								<include>target/classes/**/multiple-files*.txt</include>
 							</includes>
+							<excludes>
+								<exclude>target/classes/excluded*.*</exclude>
+							</excludes>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
