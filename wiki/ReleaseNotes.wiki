@@ -20,7 +20,7 @@
   * Fixed inability to replace tokens spanning more than one line (Issue 10).
 
 === 1.0.2 - September 5th, 2009 ===
-  * When using the outputFile parameter, if the base path does not exist it will be created (Issue 9).
+  * Enhancement to create base path for outputFile if not does not exist (Issue 9).
 
 === 1.0.1 - August 15th, 2009 ===
   * Added optional {{{<regex>[true, false]</regex>}}} parameter. Set to true when token contains a regular expression. Set to false if you do not want regular expressions considered within a token. (If not supplied, regex will be true by default) (Issue 8).
