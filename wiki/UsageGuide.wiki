@@ -78,6 +78,38 @@ Single regex file replacement with output file:
 </build>
 }}}
 
+Using regular expression flags: 
+{{{
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>com.google.code.maven-replacer-plugin</groupId>
+            <artifactId>maven-replacer-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+                <execution>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>replace</goal>
+                    </goals>
+                    <configuration>
+                        <file>target/someapp/jsp/helloWorld.jsp</file>
+                        <token>ToKeN</token>
+                        <value>value</value>
+                        <regexFlags>
+                           <regexFlag>CASE_INSENSITIVE</regexFlag>
+                           <regexFlag>MULTILINE</regexFlag>
+                        </regexFlags>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+}}}
+
 Multiple file replacement:
 {{{
 <build>
