@@ -24,7 +24,7 @@
 <tr>
 <td>regex</td><td>no (default: true)</td><td>Indicates if the token should be located with regular expressions. This should be set to false if the token contains regex characters which may miss the desired tokens or even replace the wrong tokens.</td></tr>
 <tr>
-<td>regexFlags:regexFlag</td><td>no (list cannot be empty if used)</td><td>List of standard Java regular expression Pattern flags (see [http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html Java Doc]). May contain multiple flags. May only be of the following: CANON_EQ, CASE_INSENSITIVE, COMMENTS, DOTALL, LITERAL, MULTILINE, UNICODE_CASE, UNIX_LINES.</td></tr>
+<td>regexFlags:regexFlag</td><td>no (list cannot be empty if used)</td><td>List of standard Java regular expression Pattern flags (see [http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#field_summary Java Doc]). May contain multiple flags. May only be of the following: CANON_EQ, CASE_INSENSITIVE, COMMENTS, DOTALL, LITERAL, MULTILINE, UNICODE_CASE, UNIX_LINES.</td></tr>
 <tr>
 <td>token</td><td>(see note below)</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
 <tr>
