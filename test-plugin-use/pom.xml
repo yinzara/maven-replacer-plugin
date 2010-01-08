@@ -63,6 +63,19 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>outputfile-newdir</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/simple.txt</file>
+							<token>token</token>
+							<value>value</value>
+							<outputFile>target/classes/newdir/simple-outputfile.txt</outputFile>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outputfile-remove</id>
 						<phase>test</phase>
 						<goals>

@@ -65,5 +65,12 @@ else
 	exit 1
 fi
 
+if [ `grep -c value target/classes/newdir/simple-outputfile.txt` = "1" ]; then
+	echo "target/classes/newdir/simple-outputfile.txt value okay"
+else
+	echo "target/classes/newdir/simple-outputfile.txt failed"
+	exit 1
+fi
+
 echo ""
 echo "Replacer plugin is okay."
