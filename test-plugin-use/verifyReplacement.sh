@@ -65,10 +65,24 @@ else
 	exit 1
 fi
 
+#new directory creation stopped was not working, now resolved - Issue 22
 if [ `grep -c value target/classes/newdir/simple-outputfile.txt` = "1" ]; then
 	echo "target/classes/newdir/simple-outputfile.txt value okay"
 else
 	echo "target/classes/newdir/simple-outputfile.txt failed"
+	exit 1
+fi
+
+#log.xml test - Issue 25
+if [ `grep -c '<level value="error" />' target/classes/log4j.xml` = "1" ]; then
+	if [ `grep -c '<level value="warn" />' target/classes/log4j.xml` = "1" ]; then
+		echo "target/classes/log4j.xml failed"
+		exit 1
+	else
+		echo "target/classes/log4j.xml value okay"
+	fi
+else
+	echo "target/classes/log4j.xml failed"
 	exit 1
 fi
 

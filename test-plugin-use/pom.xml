@@ -195,6 +195,18 @@
 							<value>value</value>
 						</configuration>
 					</execution>
+					<execution>
+						<id>log4j.xml</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/log4j.xml</file>
+							<tokenValueMap>target/classes/log-optimized.replacer</tokenValueMap>
+							<regex>false</regex>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>
