@@ -13,7 +13,7 @@ checkForTokens() {
 	
 	if [ $# = 3 ]; then
 		VALUE=$3		
-		if [ `grep -c $VALUE $FILE` = "1" ]; then
+		if [ `grep -c $VALUE $FILE` -gt "0" ]; then
 			echo "$FILE $VALUE found"
 		else
 			echo "$FILE $VALUE not found"
@@ -22,16 +22,23 @@ checkForTokens() {
 	fi
 }
 
+checkFileSizeMatches() {
+	LHS=`stat -c %s $1`
+	RHS=`stat -c %s $2`
+
+	if [ $LHS != $RHS ]; then
+		echo "File sizes don't match between $1 and $2"
+		exit 1
+	else
+		echo "File sizes match between $1 and $2"
+	fi
+}
+
 echo "Executing clean and replacement"
 mvn clean test
-LHS=`stat -c %s src/main/resources/simple.txt`
-RHS=`stat -c %s target/classes/simple.txt`
-if [ $LHS != $RHS ]; then
-	echo "File sizes don't match in simple replacement"
-	exit 1
-else
-	echo "File sizes match, no extra characters added"
-fi
+
+checkFileSizeMatches src/main/resources/simple.txt target/classes/simple.txt
+checkFileSizeMatches src/main/resources/largefile.txt target/classes/largefile.txt
 
 echo ""
 echo "Checking contents"
