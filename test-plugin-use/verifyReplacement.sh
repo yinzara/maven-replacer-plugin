@@ -39,6 +39,7 @@ mvn clean test
 
 checkFileSizeMatches src/main/resources/simple.txt target/classes/simple.txt
 checkFileSizeMatches src/main/resources/largefile.txt target/classes/largefile.txt
+checkFileSizeMatches src/main/resources/regex.txt target/classes/regex.txt
 
 echo ""
 echo "Checking contents"

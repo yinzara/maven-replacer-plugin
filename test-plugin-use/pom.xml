@@ -33,7 +33,7 @@
 						<configuration>
 							<file>target/classes/regex.txt</file>
 							<token>$token$</token>
-							<value>value</value>
+							<value>-value-</value>
 							<regex>false</regex>
 						</configuration>
 					</execution>
