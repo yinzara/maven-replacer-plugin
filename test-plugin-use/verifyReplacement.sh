@@ -41,5 +41,14 @@ checkForTokens target/classes/newdir/simple-outputfile.txt token value
 checkForTokens target/classes/special/multiple-tokens-to-replace.txt token1 value1
 checkForTokens target/classes/special/multiple-tokens-to-replace.txt token2 value2
 
+LHS=`stat -c %s src/main/resources/simple.txt`
+RHS=`stat -c %s target/classes/simple.txt`
+if [ $LHS != $RHS ]; then
+	echo "File sizes don't match in simple replacement, extra characters present"
+	exit 1
+else
+	echo "File sizes match, no extra characters added"
+fi
+
 echo ""
 echo "Replacer plugin is okay."
