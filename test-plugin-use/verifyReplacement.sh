@@ -27,7 +27,7 @@ mvn clean test
 LHS=`stat -c %s src/main/resources/simple.txt`
 RHS=`stat -c %s target/classes/simple.txt`
 if [ $LHS != $RHS ]; then
-	echo "File sizes don't match in simple replacement, extra characters present"
+	echo "File sizes don't match in simple replacement"
 	exit 1
 else
 	echo "File sizes match, no extra characters added"
