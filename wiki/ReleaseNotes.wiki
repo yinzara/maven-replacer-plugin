@@ -3,6 +3,10 @@
 
 = Release Notes =
 
+=== 1.3 - February 9th, 2010 ===
+  * Enhancement to supply multiple replacements per configuration (per file) (Issue 23).
+  * Fixed Issue 26 where leading and trailing new lines and white spaces were being truncated.
+
 === 1.2 - December 31st, 2009 ===
   * Added ability to supply a list of includes/excludes for multiple file replacement. Given in the standard Ant format (Issue 5).
   * Enhancement to list regular expression flags (from the Java Pattern class) for special handling of token matching (Issue 21).
