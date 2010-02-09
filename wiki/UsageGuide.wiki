@@ -35,6 +35,8 @@
 <td>value</td><td>no (default: empty)</td><td>The text to be written over any found tokens. If no value is given, the tokens found are replaced with an empty string (effectively removing any tokens found).</td></tr>
 <tr>
 <td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom or the value is long.</td></tr>
+<tr>
+<td>replacements:replacement</td><td>no (list of token/value pairs to replace within the given file)</td><td>Each replacement element to contain sub-elements as token/value pairs. Each token within the given file will be replaced by it's respective value.</td></tr>
 </table>
 
 Note: You must either supply a file, or list of includes (excludes are optional).
