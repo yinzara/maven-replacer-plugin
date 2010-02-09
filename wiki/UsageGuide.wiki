@@ -47,7 +47,7 @@ Note: Either a token, tokenFile or tokenValueMap is required. An execution shoul
 ===Examples===
 Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
 
-Single regex file replacement with output file: 
+*Single regex file replacement with output file:*
 {{{
 <build>
     <plugins>
@@ -80,7 +80,7 @@ Single regex file replacement with output file:
 </build>
 }}}
 
-Using regular expression flags: 
+*Using regular expression flags:* 
 {{{
 <build>
     <plugins>
@@ -112,7 +112,7 @@ Using regular expression flags:
 </build>
 }}}
 
-Multiple file replacement:
+*Multiple file replacement:*
 {{{
 <build>
     <plugins>
@@ -145,7 +145,7 @@ Multiple file replacement:
 </build>
 }}}
 
-Single file replacement using a tokenValueMap:
+*Single file replacement using a tokenValueMap:*
 {{{
 <build>
     <plugins>
@@ -172,7 +172,7 @@ Single file replacement using a tokenValueMap:
 </build>
 }}}
 
-Multiple token replacements per file:
+*Multiple token/value replacements per file:*
 {{{
 <build>
     <plugins>
