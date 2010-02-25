@@ -4,6 +4,7 @@
 = Installation Guide =
 
 Version 1.3 is now in the central Maven repository.
+{{{
 <build>
     <plugins>
         ...
@@ -17,7 +18,7 @@ Version 1.3 is now in the central Maven repository.
     </plugins>
     ...
 </build>
-
+}}}
 ----
 *Installing manually*
 
