@@ -1,2 +1,5 @@
-token1=value1
-token2=value2
+token1
+value1
+
+token2
+value2

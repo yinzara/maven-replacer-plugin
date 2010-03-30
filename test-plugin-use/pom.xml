@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-				<version>1.3</version>
+				<version>1.3.1</version>
 				<executions>
 					<execution>
 						<id>non-regex</id>
@@ -203,6 +203,19 @@
 							<excludes>
 								<exclude>target/classes/excluded*.*</exclude>
 							</excludes>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
+					<execution>
+						<id>multiple-files-comma-separated</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<filesToInclude>file1, file2, include*</filesToInclude>
+							<filesToExclude>file1, file2, include1</filesToExclude>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
