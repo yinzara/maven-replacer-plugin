@@ -56,8 +56,9 @@ checkForTokens target/multiple-tokens-for-map-outputfile.txt token2 value2
 checkForTokens target/classes/newdir/simple-outputfile.txt token value
 checkForTokens target/classes/special/multiple-tokens-to-replace.txt token1 value1
 checkForTokens target/classes/special/multiple-tokens-to-replace.txt token2 value2
-
-
+checkForTokens target/classes/include2 token value
+checkForTokens target/classes/file1 token value
+checkForTokens target/classes/file2 token value
 
 echo ""
 echo "Replacer plugin is okay."

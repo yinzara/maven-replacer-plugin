@@ -214,8 +214,8 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<filesToInclude>file1, file2, include*</filesToInclude>
-							<filesToExclude>file1, file2, include1</filesToExclude>
+							<filesToInclude>target/classes/file1, target/classes/file2, target/classes/include*</filesToInclude>
+							<filesToExclude>target/classes/excludefile1, target/classes/excludefile2, target/classes/include1</filesToExclude>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
