@@ -56,10 +56,11 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/classes/simple.txt</file>
+							<basedir>target/classes</basedir>
+							<file>simple.txt</file>
 							<token>token</token>
 							<value>value</value>
-							<outputFile>target/classes/simple-outputfile.txt</outputFile>
+							<outputFile>simple-outputfile.txt</outputFile>
 						</configuration>
 					</execution>
 					<execution>
@@ -106,10 +107,11 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/classes/simple.txt</file>
+							<basedir>target/classes</basedir>
+							<file>simple.txt</file>
 							<tokenFile>tokenfile.txt</tokenFile>
 							<value>value</value>
-							<outputFile>target/classes/simple-outputfile-tokenfile.txt</outputFile>
+							<outputFile>simple-outputfile-tokenfile.txt</outputFile>
 						</configuration>
 					</execution>
 					<execution>
@@ -174,9 +176,10 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/classes/special/multiple-tokens-for-map.txt</file>
+							<basedir>target</basedir>
+							<file>classes/special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
-							<outputFile>target/multiple-tokens-for-map-outputfile.txt</outputFile>
+							<outputFile>multiple-tokens-for-map-outputfile.txt</outputFile>
 						</configuration>
 					</execution>
 					<execution>
@@ -186,7 +189,8 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/classes/special/multiple-tokens-for-map.txt</file>
+							<basedir>target/classes</basedir>
+							<file>special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
 						</configuration>
 					</execution>
@@ -197,11 +201,12 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
+							<basedir>target/classes</basedir>
 							<includes>
-								<include>target/classes/**/multiple-files*.txt</include>
+								<include>nesteddir/multiple-files*.txt</include>
 							</includes>
 							<excludes>
-								<exclude>target/classes/excluded*.*</exclude>
+								<exclude>excluded*.*</exclude>
 							</excludes>
 							<token>token</token>
 							<value>value</value>
@@ -214,8 +219,9 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<filesToInclude>target/classes/file1, target/classes/file2, target/classes/include*</filesToInclude>
-							<filesToExclude>target/classes/excludefile1, target/classes/excludefile2, target/classes/include1</filesToExclude>
+							<basedir>target/classes</basedir>
+							<filesToInclude>file1, file2, include*</filesToInclude>
+							<filesToExclude>excludefile1, excludefile2, target/classes/include1</filesToExclude>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
