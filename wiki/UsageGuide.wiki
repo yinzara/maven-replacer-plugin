@@ -16,6 +16,10 @@
 <tr>
 <td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
 <tr>
+<td>filesToInclude</td><td>(see note below)</td><td>List of comma separated files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
+<tr>
+<td>filesToExclude</td><td>no</td><td>List of comma separated files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
+<tr>
 <td>file</td><td>(see note below)</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything.</td></tr>
@@ -35,6 +39,8 @@
 <td>value</td><td>no (default: empty)</td><td>The text to be written over any found tokens. If no value is given, the tokens found are replaced with an empty string (effectively removing any tokens found).</td></tr>
 <tr>
 <td>valueFile</td><td>no</td><td>A file containing a value to replace the given token with. May be multiple words or lines. This is useful if you do not wish to expose the value within your pom or the value is long.</td></tr>
+<tr>
+<td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
 <tr>
 <td>replacements:replacement</td><td>no (list of token/value pairs to replace within the given file)</td><td>Each replacement element to contain sub-elements as token/value pairs. Each token within the given file will be replaced by it's respective value.</td></tr>
 </table>
