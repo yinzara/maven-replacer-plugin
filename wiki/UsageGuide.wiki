@@ -28,7 +28,7 @@
 <tr>
 <td>token</td><td>(see note below)</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
 <tr>
-<td>tokenValueMap</td><td>(see note below)</td><td>A file containing tokens and respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to have replaced. Each line should be in the format: "token=value" or "token value" (without quotations).</td></tr>
+<td>tokenValueMap</td><td>(see note below)</td><td>A file containing tokens and respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to have replaced. Each token/value pair should be in the format: "token (new line) value" (without quotations).</td></tr>
 <tr>
 <td>tokenFile</td><td>(see note below)</td><td>A file containing the token to be replaced. May be multiple words or lines. This is useful if you do not wish to expose the token within your pom or the token is long.</td></tr>
 <tr>
