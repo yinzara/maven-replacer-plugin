@@ -17,6 +17,9 @@
 ===Selecting which files to perform replacements upon===
 <table border="1" width="800" cellpadding="5">
 <tr>
+<th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
+</tr>
+<tr>
 <td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
 <tr>
 <td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes.</td></tr>
@@ -38,6 +41,9 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 
 ===Parameters for replacing text===
 <table border="1" width="800" cellpadding="5">
+<tr>
+<th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
+</tr>
 <tr>
 <td>token</td><td>(see note below)</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
 <tr>
