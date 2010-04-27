@@ -16,14 +16,14 @@ Fortunately, we can invoke war:exploded to copy these resources earlier in the b
             <phase>prepare-package</phase>
             <goals>
                 <goal>replace</goal>
-            </goals>
-            <configuration>
-                <file>target/${project.build.finalName}/WEB-INF/helloWorld.jsp</file>
-                <token>TOKEN</token>
-                <value>VALUE</value>
-            </configuration>
+            </goals>            
         </execution>
     </executions>
+    <configuration>
+        <file>target/${project.build.finalName}/WEB-INF/helloWorld.jsp</file>
+        <token>TOKEN</token>
+        <value>VALUE</value>
+    </configuration>
 </plugin>
 }}}
 Creating the artifact:
