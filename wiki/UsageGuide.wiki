@@ -66,6 +66,8 @@ Note: Either a token, tokenFile or tokenValueMap is required. An execution shoul
 
 ----
 ===Examples===
+Note: As you can see each example's configuration has been placed inside the executions. This means that each configuration is applied only when invoked by it's phase. Alternatively, you can place the configuration outside the executions so that they are applied globally (including command line invocation). See http://maven.apache.org/guides/mini/guide-configuring-plugins.html
+
 Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
 
 *Single regex file replacement with output file:*
