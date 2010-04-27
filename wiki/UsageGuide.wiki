@@ -66,7 +66,6 @@ Note: Either a token, tokenFile or tokenValueMap is required. An execution shoul
 
 ----
 ===Examples===
-Note: Each example's configuration has been placed inside the executions. This means that each configuration is applied only when invoked by it's phase. Alternatively, you can place the configuration outside the executions so that they are applied globally (including command line invocation). See http://maven.apache.org/guides/mini/guide-configuring-plugins.html
 
 Complete examples can be found in the plugin's test utility. http://code.google.com/p/maven-replacer-plugin/source/browse/test-plugin-use/pom.xml
 
@@ -84,19 +83,19 @@ Complete examples can be found in the plugin's test utility. http://code.google.
                     <phase>prepare-package</phase>
                     <goals>
                         <goal>replace</goal>
-                    </goals>
-                    <configuration>
-                        <ignoreMissingFile>true</ignoreMissingFile>
-                        <file>target/someapp/jsp/helloWorld.jsp</file>
-                        <outputFile>
-                            target/someapp/jsp/helloWorld-updated.jsp
-                        </outputFile>
-                        <regex>false</regex>
-                        <token>$BUILD_NUMBER$</token>
-                        <value>${buildNumber}</value>
-                    </configuration>
+                    </goals>                    
                 </execution>
             </executions>
+            <configuration>
+                <ignoreMissingFile>true</ignoreMissingFile>
+                <file>target/someapp/jsp/helloWorld.jsp</file>
+                <outputFile>
+                    target/someapp/jsp/helloWorld-updated.jsp
+                </outputFile>
+                <regex>false</regex>
+                <token>$BUILD_NUMBER$</token>
+                <value>${buildNumber}</value>
+            </configuration>
         </plugin>
         ...
     </plugins>
@@ -118,17 +117,17 @@ Complete examples can be found in the plugin's test utility. http://code.google.
                     <goals>
                         <goal>replace</goal>
                     </goals>
-                    <configuration>
-                        <file>target/someapp/jsp/helloWorld.jsp</file>
-                        <token>ToKeN</token>
-                        <value>value</value>
-                        <regexFlags>
-                           <regexFlag>CASE_INSENSITIVE</regexFlag>
-                           <regexFlag>MULTILINE</regexFlag>
-                        </regexFlags>
-                    </configuration>
                 </execution>
             </executions>
+            <configuration>
+                <file>target/someapp/jsp/helloWorld.jsp</file>
+                <token>ToKeN</token>
+                <value>value</value>
+                <regexFlags>
+                    <regexFlag>CASE_INSENSITIVE</regexFlag>
+                    <regexFlag>MULTILINE</regexFlag>
+                </regexFlags>
+            </configuration>
         </plugin>
         ...
     </plugins>
@@ -150,18 +149,18 @@ Complete examples can be found in the plugin's test utility. http://code.google.
                     <goals>
                         <goal>replace</goal>
                     </goals>
-                    <configuration>
-                        <includes>
-                            <include>target/**/replace-me.*</include>
-                        </includes>
-                        <excludes>
-                            <exclude>target/**/do-not-replace-me.*</exclude>
-                        </excludes>
-                        <token>TOKEN</token>
-                        <value>VALUE</value>
-                    </configuration>
                 </execution>
             </executions>
+            <configuration>
+                <includes>
+                    <include>target/**/replace-me.*</include>
+                </includes>
+                <excludes>
+                    <exclude>target/**/do-not-replace-me.*</exclude>
+                </excludes>
+                <token>TOKEN</token>
+                <value>VALUE</value>
+            </configuration>
         </plugin>
         ...
     </plugins>
@@ -182,13 +181,13 @@ Complete examples can be found in the plugin's test utility. http://code.google.
                     <phase>prepare-package</phase>
                     <goals>
                         <goal>replace</goal>
-                    </goals>
-                    <configuration>
-                        <file>target/classes/database.properties</file>
-                        <tokenValueMap>etc/${environment}/database.conf</tokenValueMap>
-                    </configuration>
+                    </goals>                    
                 </execution>
             </executions>
+            <configuration>
+                <file>target/classes/database.properties</file>
+                <tokenValueMap>etc/${environment}/database.conf</tokenValueMap>
+            </configuration>
         </plugin>
         ...
     </plugins>
@@ -210,21 +209,21 @@ Complete examples can be found in the plugin's test utility. http://code.google.
                     <goals>
                         <goal>replace</goal>
                     </goals>
-                    <configuration>
-                        <file>target/classes/database.properties</file>
-                        <replacements>
-                            <replacement>
-                                <token>token1</token>
-                                <value>value1</value>
-                            </replacement>
-                            <replacement>
-                                <token>token2</token>
-                                <value>value2</value>
-                            </replacement>
-                        </replacements>                        
-                    </configuration>
                 </execution>
             </executions>
+            <configuration>
+                <file>target/classes/database.properties</file>
+                <replacements>
+                    <replacement>
+                        <token>token1</token>
+                        <value>value1</value>
+                    </replacement>
+                    <replacement>
+                        <token>token2</token>
+                        <value>value2</value>
+                    </replacement>
+                </replacements>                        
+            </configuration>
         </plugin>
         ...
     </plugins>
