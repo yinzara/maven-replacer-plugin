@@ -246,6 +246,18 @@
 							</replacements>
 						</configuration>
 					</execution>
+					<execution>
+						<id>non-ascii-char-file</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/non-ascii-char-file</file>
+							<token>tôkên</token>
+							<value>vÄluê</value>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>
