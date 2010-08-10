@@ -59,7 +59,6 @@ checkForTokens target/classes/special/multiple-tokens-to-replace.txt token2 valu
 checkForTokens target/classes/include2 token value
 checkForTokens target/classes/file1 token value
 checkForTokens target/classes/file2 token value
-checkForTokens target/classes/non-ascii-char-file tôkên vÄluê
 
 echo ""
 echo "Replacer plugin is okay."
