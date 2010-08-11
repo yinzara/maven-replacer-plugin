@@ -1,2 +1,4 @@
-﻿^replace=.*
+﻿
+
+^replace=.*
 replace=value

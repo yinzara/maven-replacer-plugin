@@ -46,8 +46,7 @@
 						<configuration>
 							<basedir>target/classes</basedir>
 							<file>linematch.txt</file>
-							<token>^replace=.*$</token>
-							<value>replace=value</value>
+							<tokenValueMap>linematch-token-map.txt</tokenValueMap>
 							<regexFlags>
 								<regex>MULTILINE</regex>
 							</regexFlags>
