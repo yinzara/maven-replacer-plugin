@@ -38,6 +38,22 @@
 						</configuration>
 					</execution>
 					<execution>
+						<phase>process-resources</phase>
+						<id>line match</id>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>linematch.txt</file>
+							<token>^replace=.*$</token>
+							<value>replace=value</value>
+							<regexFlags>
+								<regex>MULTILINE</regex>
+							</regexFlags>
+						</configuration>
+					</execution>
+					<execution>
 						<id>multiline</id>
 						<phase>test</phase>
 						<goals>
@@ -221,7 +237,8 @@
 						<configuration>
 							<basedir>target/classes</basedir>
 							<filesToInclude>file1, file2, include*</filesToInclude>
-							<filesToExclude>excludefile1, excludefile2, target/classes/include1</filesToExclude>
+							<filesToExclude>excludefile1, excludefile2,
+								target/classes/include1</filesToExclude>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
