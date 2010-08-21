@@ -1,4 +1,6 @@
-token1
+
+
+^test=.*
 value1
 
 token2

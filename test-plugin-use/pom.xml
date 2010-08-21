@@ -186,6 +186,9 @@
 							<file>classes/special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
 							<outputFile>multiple-tokens-for-map-outputfile.txt</outputFile>
+							<regexFlags>
+								<regexFlag>MULTILINE</regexFlag>
+							</regexFlags>
 						</configuration>
 					</execution>
 					<execution>
