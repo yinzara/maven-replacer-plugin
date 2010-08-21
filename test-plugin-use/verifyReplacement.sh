@@ -37,7 +37,7 @@ checkFileSizeMatches() {
 echo "Executing clean and replacement"
 mvn clean test
 if [ $? != 0 ]; then
-	echo "Maven command failed"
+	echo "Maven build failed"
 	exit 1
 fi
 
