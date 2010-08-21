@@ -25,20 +25,9 @@ The maven-replacer-plugin is uploaded within the central Maven repository.
 Download the latest binary from [http://code.google.com/p/maven-replacer-plugin/downloads/list downloads] and use mvn install. e.g.
 {{{
 mvn install:install-file -Dfile=/path/to/file/maven-replacer-plugin-1.3.2.jar -DgroupId=com.google.code.maven-replacer-plugin \ 
--DartifactId=maven-replacer-plugin -Dversion=1.3.2 -Dpackaging=jar -DgeneratePom=true
+-DartifactId=maven-replacer-plugin -Dversion=1.3.2 -Dpackaging=jar -DpomFile=maven-replacer-plugin-1.3.2.pom
 }}}
 
-Or you can add the plugin repository to your settings.xml or pom.xml:
-{{{
-<pluginRepositories>
-    <pluginRepository>
-        <id>maven-replacer-plugin reposoitory</id>
-        <url>
-            http://maven-replacer-plugin.googlecode.com/svn/release-repo
-        </url>
-    </pluginRepository>
-</pluginRepositories>
-}}}
 To install the plugin by building locally, check out the latest copy from trunk (or a tag) and use mvn install (which should build and install the plugin).
 
 To install into Nexus, either add the repository or upload the JAR to your 3rd party libraries.
