@@ -36,6 +36,10 @@ checkFileSizeMatches() {
 
 echo "Executing clean and replacement"
 mvn clean test
+if [ $? != 0 ]; then
+	echo "Maven command failed"
+	exit 1
+fi
 
 checkFileSizeMatches src/main/resources/simple.txt target/classes/simple.txt
 checkFileSizeMatches src/main/resources/largefile.txt target/classes/largefile.txt

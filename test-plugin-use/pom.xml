@@ -8,21 +8,12 @@
 	<name>test-plugin-use</name>
 	<url>http://maven.apache.org</url>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-replacer-plugin reposoitory</id>
-			<url>
-				http://maven-replacer-plugin.googlecode.com/svn/release-repo
-			</url>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-				<version>1.3.2-SNAPSHOT</version>
+				<version>1.3.3-SNAPSHOT</version>
 				<executions>
 					<execution>
 						<id>non-regex</id>
