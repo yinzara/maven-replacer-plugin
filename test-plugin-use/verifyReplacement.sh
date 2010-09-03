@@ -67,4 +67,4 @@ checkForTokens target/classes/linematch.txt replace=token replace=value
 
 echo ""
 echo "Replacer plugin is okay."
-mvn clean
+rm -fR target/
