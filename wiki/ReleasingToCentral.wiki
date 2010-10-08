@@ -1,4 +1,5 @@
 #summary Instructions for releasing maven-replacer-plugin to Central.
+#labels Phase-Implementation
 
 = Releasing to Central =
 
@@ -6,4 +7,4 @@
 
  * Usage of GnuPG: [http://www.sonatype.com/people/2010/01/how-to-generate-pgp-signatures-with-maven/]
 
- * Public key's name at hkp://pgp.mit.edu - 20D4B148.
+ * Public key name at hkp://pgp.mit.edu - 20D4B148.
