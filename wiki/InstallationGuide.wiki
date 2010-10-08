@@ -1,5 +1,5 @@
 #summary How to install this plugin into your local/corporate repository
-#labels installation,guide
+#labels installation,guide,Phase-Deploy
 
 = Installation Guide =
 
