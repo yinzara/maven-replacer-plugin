@@ -1,5 +1,5 @@
 #summary Instructions for releasing maven-replacer-plugin to Central.
-#labels Phase-Implementation
+#labels Phase-Implementation,developers
 
 = Releasing to Central =
 
