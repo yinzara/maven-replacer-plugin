@@ -63,6 +63,7 @@ checkForTokens target/classes/special/multiple-tokens-to-replace.txt token2 valu
 checkForTokens target/classes/include2 token value
 checkForTokens target/classes/file1 token value
 checkForTokens target/classes/file2 token value
+checkForTokens target/classes/outdir/simple.txt token value
 checkForTokens target/classes/linematch.txt replace=token replace=value
 
 echo ""

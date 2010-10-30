@@ -56,6 +56,20 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>outdir</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>simple.txt</file>
+							<token>token</token>
+							<value>value</value>
+							<outputDir>outdir</outputDir>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outputfile</id>
 						<phase>test</phase>
 						<goals>
