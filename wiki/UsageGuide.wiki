@@ -12,6 +12,10 @@
 <td>phase</td><td>no (default: compile)</td><td>The desired phase can easily be redefined here. Typically used phases are: compile, test and prepare-package.</td></tr>
 <tr>
 <td>goal</td><td>yes</td><td>Always "replace".</td></tr>
+<tr>
+<td>outputDir</td><td>yes</td><td>Destination directory relative to the baseDir for all replaced files to be written to.</td></tr>
+<tr>
+<td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
 </table>
 
 ===Selecting which files to perform replacements upon===
@@ -33,8 +37,6 @@
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything.</td></tr>
 <tr>
 <td>outputFile</td><td>no (default: file)</td><td>The input file is read and the final output (after replacing tokens) is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. You should not use outputFile when using a list of includes.</td></tr>
-<tr>
-<td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
 </table>
 
 Note: You must either supply a file, or list of includes (excludes are optional).
