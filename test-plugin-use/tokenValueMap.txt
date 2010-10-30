@@ -1,6 +1,4 @@
 #test comment
-^test=.*
-value1
+^test.*=value1
 
-token2
-value2
+token2=value2
