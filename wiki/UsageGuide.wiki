@@ -55,6 +55,8 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 <tr>
 <td>tokenValueMap</td><td>(see note below)</td><td>A file containing tokens and respective values to replace with. This file may contain multiple entries to support a single file containing different tokens to have replaced. Each token/value pair should be in the format: "token=value" (without quotations). If your token contains ='s you must escape the = character to \=. e.g. tok\=en=value</td></tr>
 <tr>
+<td>commentsEnabled</td><td>default: true</td><td>Enables comments within the tokenValueMap (denoted by '#'). If your token starts with an '#', then you must supply the commentsEnabled parameter and with a value of false.
+<tr>
 <td>tokenFile</td><td>(see note below)</td><td>A file containing the token to be replaced. May be multiple words or lines. This is useful if you do not wish to expose the token within your pom or the token is long.</td></tr>
 <tr>
 <td>value</td><td>no (default: empty)</td><td>The text to be written over any found tokens. If no value is given, the tokens found are replaced with an empty string (effectively removing any tokens found).</td></tr>
