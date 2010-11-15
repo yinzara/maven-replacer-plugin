@@ -65,6 +65,8 @@ checkForTokens target/classes/file1 token value
 checkForTokens target/classes/file2 token value
 checkForTokens target/classes/outdir/simple.txt token value
 checkForTokens target/classes/linematch.txt replace=token replace=value
+checkForTokens target/classes/target/outputDir/nesteddir/multiple-files2.txt token value
+checkForTokens target/outputBasedir/outdir/simple.txt token value
 
 echo ""
 echo "Replacer plugin is okay."

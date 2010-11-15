@@ -70,6 +70,21 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>outdir-with-outputBasedir</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>simple.txt</file>
+							<token>token</token>
+							<value>value</value>
+							<outputDir>outdir</outputDir>
+							<outputBasedir>target/outputBasedir</outputBasedir>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outputfile</id>
 						<phase>test</phase>
 						<goals>
@@ -231,6 +246,25 @@
 							<excludes>
 								<exclude>excluded*.*</exclude>
 							</excludes>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
+					<execution>
+						<id>multiple-files-to-outdir</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<includes>
+								<include>nesteddir/multiple-files*.txt</include>
+							</includes>
+							<excludes>
+								<exclude>excluded*.*</exclude>
+							</excludes>
+							<outputDir>target/outputDir</outputDir>
 							<token>token</token>
 							<value>value</value>
 						</configuration>
