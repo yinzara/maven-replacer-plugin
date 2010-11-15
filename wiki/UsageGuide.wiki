@@ -79,7 +79,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
             <executions>
                 <execution>
                     <phase>prepare-package</phase>
@@ -112,7 +112,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
             <executions>
                 <execution>
                     <phase>prepare-package</phase>
@@ -144,7 +144,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
             <executions>                
                 <execution>
                     <phase>prepare-package</phase>
@@ -177,7 +177,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
             <executions>                
                 <execution>
                     <phase>prepare-package</phase>
@@ -204,7 +204,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
             <artifactId>maven-replacer-plugin</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
             <executions>                
                 <execution>
                     <phase>prepare-package</phase>
