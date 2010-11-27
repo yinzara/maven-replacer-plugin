@@ -5,6 +5,9 @@
 
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
+=== 1.3.5 - November 28th, 2010 ===
+  * Fixed Issue 41.
+  * Fixed Issue 40 - ignoreMissingFile parameter now only usable with file parameter.
 
 === 1.3.4 - November 15th, 2010 ===
   * Enhancement to add preserving of directory structure (by default) when using includes and outputDir. Files written to the outputDir will by default preserve their parent directories found during the includes file find. (Issue 38).
