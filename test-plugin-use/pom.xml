@@ -74,6 +74,24 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>delimiters</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>delimiters.txt</file>
+							<regex>false</regex>
+							<token>token</token>
+							<value>value</value>
+							<delimiters>
+								<delimiter>@</delimiter>
+								<delimiter>#{*}</delimiter>
+							</delimiters>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outdir-with-outputBasedir</id>
 						<phase>test</phase>
 						<goals>
