@@ -88,6 +88,7 @@
 							<delimiters>
 								<delimiter>@</delimiter>
 								<delimiter>#{*}</delimiter>
+								<delimiter>$${*}</delimiter>
 							</delimiters>
 						</configuration>
 					</execution>
