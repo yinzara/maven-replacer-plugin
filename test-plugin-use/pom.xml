@@ -92,6 +92,20 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>unescaped</id>
+						<phase>test</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>unescape.txt</file>
+							<unescape>true</unescape>
+							<token>token\r\n123\t456</token>
+							<value>value\r\n789\t098</value>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outdir-with-outputBasedir</id>
 						<phase>test</phase>
 						<goals>
