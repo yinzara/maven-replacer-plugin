@@ -101,8 +101,8 @@
 							<basedir>target/classes</basedir>
 							<file>unescape.txt</file>
 							<unescape>true</unescape>
-							<token>token\r\n123\t456</token>
-							<value>value\r\n789\t098</value>
+							<token>token${line.separator}123\t456</token>
+							<value>value${line.separator}789\t098</value>
 						</configuration>
 					</execution>
 					<execution>
