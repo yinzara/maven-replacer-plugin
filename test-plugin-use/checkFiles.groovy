@@ -1,5 +1,6 @@
 def checkForTokensAndValues = { filename, token="token", value="value" ->
 	String content = new File(filename).getText()
+	println "Inspecting file: ${filename}"
 	
 	assert !content.contains(token)
 	println "${filename} ${token} removed"
