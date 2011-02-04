@@ -71,7 +71,7 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 <tr>
 <td>replacements:replacement</td><td>no (list of token/value pairs to replace within the given file)</td><td>Each replacement element to contain sub-elements as token/value pairs. Each token within the given file will be replaced by it's respective value.</td></tr>
 <tr>
-<td>unescape</td><td>no (does not unescape by default)</td><td>Allows matching on tokens or replacement with values containing escaped characters which are then unescaped for replacement. e.g. token\n123 would match tokens: token(new line)123.</td></tr>
+<td>unescape</td><td>no (does not unescape by default)</td><td>Unescapes tokens and values which contain escaped special characters. e.g. token\n123 would match tokens: token(new line)123.</td></tr>
 <tr>
 <td>delimiters:delimiter</td><td>no</td><td>Add a list of delimiters which are added on either side of tokens to match against. e.g. @ would match @token@. You may also use the '*' character to place the token in the desired location for matching. e.g. ${*} would match ${token}.</td></tr>
 </table>
