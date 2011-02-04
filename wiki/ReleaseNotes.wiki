@@ -5,6 +5,11 @@
 
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
+=== 1.3.6 - February 4th, 2011 ===
+  * Enhancement to add quiet mode. Now logs a report rather than per file logging. (Issue 43).
+  * Enhancement to add optional delimiters to tokens for matching. Delimiters can either wrap a token simply or add specific prefixes and suffixes to tokens. (Issue 44).
+  * Enhancement to support optional unescaping special characters to match tokens and the replacement values. (Issue 45).
+
 === 1.3.5 - November 28th, 2010 ===
   * Fixed Issue 41.
   * Fixed Issue 40 - ignoreMissingFile parameter now only usable with file parameter.
