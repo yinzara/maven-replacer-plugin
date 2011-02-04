@@ -21,7 +21,7 @@
 <tr>
 <td>preserveDir</td><td>no (default: true)</td><td>Preserve the directory structure of files found with the includes parameter when writing to the outputDir.</td></tr>
 <tr>
-<td>quite</td><td>no (default: false)</td><td>Stops printing a summary of files that have had replacements performed upon them when true.</td></tr>
+<td>quiet</td><td>no (default: false)</td><td>Stops printing a summary of files that have had replacements performed upon them when true.</td></tr>
 </table>
 
 ===Selecting which files to perform replacements upon===
