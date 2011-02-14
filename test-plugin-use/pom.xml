@@ -13,14 +13,14 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-                <version>1.3.7-SNAPSHOT</version>
-                <configuration>
-               		<quiet>true</quiet>
-                </configuration>
+				<version>1.3.7-SNAPSHOT</version>
+				<configuration>
+					<quiet>true</quiet>
+				</configuration>
 				<executions>
 					<execution>
 						<id>non-regex</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -49,7 +49,7 @@
 					</execution>
 					<execution>
 						<id>multiline</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -61,7 +61,7 @@
 					</execution>
 					<execution>
 						<id>outdir</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -75,7 +75,7 @@
 					</execution>
 					<execution>
 						<id>delimiters</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -94,7 +94,7 @@
 					</execution>
 					<execution>
 						<id>unescaped</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -108,7 +108,7 @@
 					</execution>
 					<execution>
 						<id>outdir-with-outputBasedir</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -123,7 +123,7 @@
 					</execution>
 					<execution>
 						<id>outputfile</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -137,7 +137,7 @@
 					</execution>
 					<execution>
 						<id>outputfile-newdir</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -150,7 +150,7 @@
 					</execution>
 					<execution>
 						<id>largefile</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -162,7 +162,7 @@
 					</execution>
 					<execution>
 						<id>outputfile-remove</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -174,7 +174,7 @@
 					</execution>
 					<execution>
 						<id>outputfile-tokenfile</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -188,7 +188,7 @@
 					</execution>
 					<execution>
 						<id>outputfile-valuefile</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -201,7 +201,7 @@
 					</execution>
 					<execution>
 						<id>regex-flags</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -218,7 +218,7 @@
 					</execution>
 					<execution>
 						<id>simple</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -230,7 +230,7 @@
 					</execution>
 					<execution>
 						<id>ignoreMissingFile</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -243,7 +243,7 @@
 					</execution>
 					<execution>
 						<id>outputfile-tokenValueMap</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -259,7 +259,7 @@
 					</execution>
 					<execution>
 						<id>tokenValueMap</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -271,7 +271,7 @@
 					</execution>
 					<execution>
 						<id>multiple-files</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -289,7 +289,7 @@
 					</execution>
 					<execution>
 						<id>multiple-files-to-outdir</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -308,7 +308,7 @@
 					</execution>
 					<execution>
 						<id>multiple-files-comma-separated</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -323,7 +323,7 @@
 					</execution>
 					<execution>
 						<id>multiple-sub-replacement</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -343,7 +343,7 @@
 					</execution>
 					<execution>
 						<id>non-ascii-char-file</id>
-						<phase>test</phase>
+						<phase>process-test-resources</phase>
 						<goals>
 							<goal>replace</goal>
 						</goals>
@@ -356,20 +356,44 @@
 				</executions>
 			</plugin>
 			<plugin>
-			    <groupId>org.codehaus.groovy.maven</groupId>
+				<groupId>org.codehaus.groovy.maven</groupId>
 				<artifactId>gmaven-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>test</phase>
 						<goals>
-							<goal>execute</goal>
+							<goal>generateStubs</goal>
+							<goal>compile</goal>
+							<goal>generateTestStubs</goal>
+							<goal>testCompile</goal>
 						</goals>
-						<configuration>
-							<source>checkFiles.groovy</source>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.gmaven.runtime</groupId>
+			<artifactId>gmaven-runtime</artifactId>
+			<version>1.3</version>
+			<type>pom</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>1.7.6</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 </project>
