@@ -60,6 +60,20 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>outside-outdir</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>simple.txt</file>
+							<token>token</token>
+							<value>value</value>
+							<outputFile>/tmp/simple.txt</outputFile>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outdir</id>
 						<phase>process-test-resources</phase>
 						<goals>
@@ -267,6 +281,18 @@
 							<basedir>target/classes</basedir>
 							<file>special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
+						</configuration>
+					</execution>
+					<execution>
+						<id>variableTokenValueMap</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>special/variableTokenValueMap.txt</file>
+							<variableTokenValueMap>token1=value1,token2=value2</variableTokenValueMap>
 						</configuration>
 					</execution>
 					<execution>
