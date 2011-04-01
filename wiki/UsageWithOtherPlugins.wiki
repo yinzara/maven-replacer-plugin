@@ -26,7 +26,22 @@ Fortunately, we can invoke war:exploded to copy these resources earlier in the b
     </configuration>
 </plugin>
 }}}
-Creating the artifact:
+
+There needs to be a hooking spot for running replacements on files before they are packaged into a war.
+Use the following war plugin configuration to allow the files to be modified first:
 {{{
-mvn clean war:exploded package
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-war-plugin</artifactId>
+   <version>2.1.1</version>
+   <executions>
+     <execution>
+       <id>prepare-war</id>
+       <phase>prepare-package</phase>
+       <goals>
+         <goal>exploded</goal>
+       </goals>
+     </execution>
+   </executions>
+</plugin>
 }}}
