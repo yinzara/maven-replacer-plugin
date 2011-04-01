@@ -27,7 +27,7 @@ Fortunately, we can invoke war:exploded to copy these resources earlier in the b
 </plugin>
 }}}
 
-There needs to be a hooking spot for running replacements on files before they are packaged into a war.
+There needs to be a hooking spot for running replacements on files before they are packaged into a war. Make sure you add this BEFORE the maven-replacer-plugin if they both execute in the same phase (i.e. prepare-package).
 Use the following war plugin configuration to allow the files to be modified before being packaged:
 {{{
 <plugin>
