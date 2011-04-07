@@ -74,6 +74,19 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>timestamped</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<basedir>target/classes</basedir>
+							<file>timestamped.toReplace</file>
+							<token>project.version</token>
+							<value>${project.version}-${maven.build.timestamp}</value>
+						</configuration>
+					</execution>
+					<execution>
 						<id>outdir</id>
 						<phase>process-test-resources</phase>
 						<goals>

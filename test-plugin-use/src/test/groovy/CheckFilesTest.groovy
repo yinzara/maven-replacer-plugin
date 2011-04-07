@@ -41,6 +41,7 @@ class CheckFilesTest {
 		checkForTokensAndValues "target/classes/special/variableTokenValueMap.txt", "token1", "value1"
 		checkForTokensAndValues "target/classes/special/variableTokenValueMap.txt", "token2", "value2"
 		checkForTokensAndValues "target/classes/target/outputDir/nesteddir/multiple-files2.txt", "token", "value"
+		checkForTokensAndValues "target/classes/timestamped.toReplace", "project.version", "0.0.1-SNAPSHOT"
 		checkForTokensAndValues "target/outputBasedir/outdir/simple.txt"
 		checkForTokensAndValues "/tmp/simple.txt"
 	}
