@@ -49,4 +49,4 @@ Use the following war plugin configuration to allow the files to be modified bef
    </executions>
 </plugin>
 }}}
-Or otherwise use the {{{<useCache>true</useCache>}}} for the war plugin 2.1.0+ configuration.
+Otherwise use the {{{<useCache>true</useCache>}}} for the war plugin 2.1.0+ configuration.
