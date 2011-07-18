@@ -39,8 +39,7 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<basedir>target/classes</basedir>
-							<file>linematch.txt</file>
+							<file>target/classes/linematch.txt</file>
 							<tokenValueMap>linematch-token-map.txt</tokenValueMap>
 							<regexFlags>
 								<regex>MULTILINE</regex>
@@ -275,10 +274,9 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<basedir>target</basedir>
-							<file>classes/special/multiple-tokens-for-map.txt</file>
+							<file>target/classes/special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
-							<outputFile>multiple-tokens-for-map-outputfile.txt</outputFile>
+							<outputFile>target/multiple-tokens-for-map-outputfile.txt</outputFile>
 							<regexFlags>
 								<regexFlag>MULTILINE</regexFlag>
 							</regexFlags>
@@ -291,8 +289,7 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<basedir>target/classes</basedir>
-							<file>special/multiple-tokens-for-map.txt</file>
+							<file>target/classes/special/multiple-tokens-for-map.txt</file>
 							<tokenValueMap>tokenValueMap.txt</tokenValueMap>
 						</configuration>
 					</execution>
