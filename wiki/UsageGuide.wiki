@@ -4,7 +4,7 @@
 = Usage Guide =
 
 ===Parameters used in any execution===
-<table border="1" width="810" cellpadding="5">
+<table border="1" width="820" cellpadding="5">
 <tr>
 <th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
 </tr>
