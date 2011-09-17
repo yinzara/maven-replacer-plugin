@@ -47,6 +47,18 @@
 						</configuration>
 					</execution>
 					<execution>
+						<phase>process-resources</phase>
+						<id>ignoring errors with missing tokenValueMap</id>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/simple.txt</file>
+							<tokenValueMap>does.not.exist</tokenValueMap>
+							<ignoreErrors>true</ignoreErrors>
+						</configuration>
+					</execution>
+					<execution>
 						<id>multiline</id>
 						<phase>process-test-resources</phase>
 						<goals>
