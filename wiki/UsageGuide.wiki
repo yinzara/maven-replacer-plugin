@@ -3,7 +3,7 @@
 
 = Usage Guide =
 
-===Parameters to used in any execution===
+===Parameters used in any execution===
 <table border="1" width="800" cellpadding="5">
 <tr>
 <th width="100">Parameter</th><th width="150">Required</th><th>Description</th>
@@ -22,6 +22,8 @@
 <td>preserveDir</td><td>no (default: true)</td><td>Preserve the directory structure of files found with the includes parameter when writing to the outputDir.</td></tr>
 <tr>
 <td>quiet</td><td>no (default: false)</td><td>Stops printing a summary of files that have had replacements performed upon them when true.</td></tr>
+<tr>
+<td>ignoreErrors</td><td>no (default: false)</td><td>Ignore any errors with missing files or any other exceptions caused by this plugin. The Maven build will continue and log an error if ignoreErrors is set to true and an error occurs.</td></tr>
 </table>
 
 ===Selecting which files to perform replacements upon===
