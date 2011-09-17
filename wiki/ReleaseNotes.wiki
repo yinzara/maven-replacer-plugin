@@ -8,7 +8,7 @@ Note: For more details on each item, please see its Issue or the UsageGuide.
 === 1.3.9 - September 19th, 2011===
   * Fixed Issue 53 where tokenValueMap file was ignoring the set basedir property.
   * Fixed Issue 56 where Maven 3 reports warnings about not knowing if this plugin is thread safe.
-  * Enhancement to ignore any errors caused by the plugin and continue with the build. (Issue 54).
+  * Enhancement to ignore any errors (ignoreErrors) caused by the plugin and continue with the build. (Issue 54).
 
 === 1.3.8 - May 13th, 2011 ===
   * Fixed Issue 51 where output to an outside directory on Windows OS types was not working.
