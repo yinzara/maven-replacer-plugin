@@ -3,8 +3,8 @@ import org.junit.Test
 class CheckFilesTest {
 	
 	def checkForTokensAndValues = { filename, token="token", value="value" ->
-		String content = new File(filename).getText()
 		println "Inspecting file: ${filename}"
+		String content = new File(filename).getText()
 		
 		assert !content.contains(token)
 		println "${filename} ${token} removed"
