@@ -401,6 +401,38 @@
 							<value>vÄluê</value>
 						</configuration>
 					</execution>
+					<execution>
+						<id>xpath</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/xpath.xml</file>
+							<outputFile>target/xpath-out.xml</outputFile>
+							<xpath>//person[firstname='token' and lastname='change me']</xpath>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
+					<execution>
+						<id>xpath-in-replacements</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/xpath.xml</file>
+							<outputFile>target/xpath-in-replacements-out.xml</outputFile>
+							<replacements>
+								<replacement>
+									<xpath>//person[firstname='token' and lastname='change me']</xpath>
+									<token>token</token>
+									<value>value</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>

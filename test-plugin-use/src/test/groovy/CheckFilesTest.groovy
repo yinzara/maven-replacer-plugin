@@ -43,6 +43,8 @@ class CheckFilesTest {
 		checkForTokensAndValues "target/classes/target/outputDir/nesteddir/multiple-files2.txt", "token", "value"
 		checkForTokensAndValues "target/classes/timestamped.toReplace", "project.version", "0.0.1-SNAPSHOT"
 		checkForTokensAndValues "target/outputBasedir/outdir/simple.txt"
+		checkForTokensAndValues "target/xpath-out.xml"
+		checkForTokensAndValues "target/xpath-in-replacements-out.xml"
 		checkForTokensAndValues "/tmp/simple.txt"
 	}
 }
