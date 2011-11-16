@@ -5,7 +5,10 @@
 
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
-=== 1.3.9 - September 18th, 2011===
+=== 1.4.0 - TBA ===
+  * Enhancement to support X-Path locating of XML fragments to perform replacements upon. (Issue 58).
+
+=== 1.3.9 - September 18th, 2011 ===
   * Fixed Issue 53 where tokenValueMap file was ignoring the set basedir property.
   * Fixed Issue 56 where Maven 3 reports warnings about not knowing if this plugin is thread safe.
   * Enhancement to ignore any errors (ignoreErrors) caused by the plugin and continue with the build. (Issue 54).
