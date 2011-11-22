@@ -78,6 +78,8 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 <td>unescape</td><td>no (does not unescape by default)</td><td>Unescapes tokens and values which contain escaped special characters. e.g. token\n123 would match tokens: token(new line)123.</td></tr>
 <tr>
 <td>delimiters:delimiter</td><td>no</td><td>Add a list of delimiters which are added on either side of tokens to match against. e.g. @ would match @token@. You may also use the '*' character to place the token in the desired location for matching. e.g. ${*} would match ${token}.</td></tr>
+<tr>
+<td>xpath</td><td>no</td><td>Use X-Path to locate a document node to perform replacements upon. This parameter takes an X-Path expression. Since 1.4.0 - Issue 58.</td></tr>
 </table>
 
 Note: Either a token, tokenFile or tokenValueMap is required. An execution should not contain more than one of these.
