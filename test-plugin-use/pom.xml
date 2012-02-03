@@ -13,7 +13,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
-				<version>1.4.1-SNAPSHOT</version>
+				<version>1.4.2-SNAPSHOT</version>
 				<configuration>
 					<quiet>true</quiet>
 				</configuration>
