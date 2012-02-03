@@ -42,7 +42,7 @@
 <tr>
 <td>file</td><td>(see note below)</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
 <tr>
-<td>encoding</td><td>no</td><td>File encoding used for reading and writing files different from the default system's file encoding.</td></tr>
+<td>encoding</td><td>no (default: system default, i.e. UTF-8)</td><td>File encoding used for reading and writing files different from the default system's file encoding.</td></tr>
 <tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything. Only usable with file parameter.</td></tr>
 <tr>
