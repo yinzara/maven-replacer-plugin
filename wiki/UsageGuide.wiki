@@ -42,6 +42,8 @@
 <tr>
 <td>file</td><td>(see note below)</td><td>Path to single file to replace tokens in. The file must be text (ascii). Based on current execution path.</td></tr>
 <tr>
+<td>encoding</td><td>no</td><td>File encoding used for reading and writing files different from the default system's file encoding.</td></tr>
+<tr>
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything. Only usable with file parameter.</td></tr>
 <tr>
 <td>outputFile</td><td>no (default: file)</td><td>The input file is read and the final output (after replacing tokens) is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. You should not use outputFile when using a list of includes.</td></tr>
