@@ -47,6 +47,10 @@
 <td>ignoreMissingFile</td><td>no (default: false)</td><td>Set to true to not fail build if the file is not found. First checks if file exists and exits without attempting to replace anything. Only usable with file parameter.</td></tr>
 <tr>
 <td>outputFile</td><td>no (default: file)</td><td>The input file is read and the final output (after replacing tokens) is written to this file. The path and file are created if it does not exist. If it does exist, the contents are overwritten. You should not use outputFile when using a list of includes.</td></tr>
+<tr>
+<td>inputFilePattern</td><td>no</td><td>Regular expression to match upon the name of the file being replaced. Use groups to match the fragments to make use of within outputFilePattern. This parameter will have no effect without outputFilePattern also being used.</td></tr>
+<tr>
+<td>outputFilePattern</td><td>no</td><td>Expression for making use of the matched groups from inputFilePattern for creating your output file's name. This parameter will have no effect without inputFilePattern also being used. Ensure you are using the Java standard's group identifies (i.e. $1, $2, etc).</td></tr>
 </table>
 
 Note: You must either supply a file, or list of includes (excludes are optional).
