@@ -8,7 +8,7 @@ Note: For more details on each item, please see its Issue or the UsageGuide.
 === 1.5.0 - March 13th, 2012 ===
   * Renamed artifactId to "replacer" from "maven-replacer-plugin" due to naming policy change from the Maven team. (Issue 62).
   * Fixed Issue 62 where tokenValueMap was not allowing absolute paths to this file.
-  * Enhancement to support dynamic output file's name based on the respective input file's name. This is achieved with inputFilePattern and outputFilePattern parameters which are regular expressions for output file's name to be replaced with. (Issued 28).
+  * Enhancement to support dynamic output file's name based on the respective input file's name. This is achieved with inputFilePattern and outputFilePattern parameters which are regular expressions for output file's name to be replaced with. (Issue 28).
 
 === 1.4.1 - February 3rd, 2012 ===
   * Enhancement to accept different file encodings than the system default. Effects reading and writing files. (Optional parameter for Issue 61).
