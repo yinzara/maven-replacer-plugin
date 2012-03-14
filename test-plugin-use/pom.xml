@@ -433,6 +433,20 @@
 							</replacements>
 						</configuration>
 					</execution>
+					<execution>
+						<id>dynamic-outputfiles-from-patterns</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/simple.txt</file>
+							<inputFilePattern>simple.(.+)</inputFilePattern>
+							<outputFilePattern>simple.$1.output</outputFilePattern>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>

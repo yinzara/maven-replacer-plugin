@@ -45,6 +45,7 @@ class CheckFilesTest {
 		checkForTokensAndValues "target/outputBasedir/outdir/simple.txt"
 		checkForTokensAndValues "target/xpath-out.xml"
 		checkForTokensAndValues "target/xpath-in-replacements-out.xml"
+		checkForTokensAndValues "target/classes/simple.txt.output"
 		checkForTokensAndValues "/tmp/simple.txt"
 	}
 }
