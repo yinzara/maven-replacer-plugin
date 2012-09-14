@@ -8,6 +8,10 @@
 	<name>test-plugin-use</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -15,7 +19,7 @@
 				<artifactId>replacer</artifactId>
 				<version>1.5.1-SNAPSHOT</version>
 				<configuration>
-					<quiet>true</quiet>
+					<quiet>false</quiet>
 				</configuration>
 				<executions>
 					<execution>
