@@ -10,3 +10,8 @@
  * Public key name at hkp://pgp.mit.edu - 20D4B148.
 
  * Use oss.sonatype.org for Nexus Central sync
+
+Commands to build and deploy to staging OSS Sonatype:
+{{{
+mvn clean release:prepare -B -Dgpg.passphrase=(project owner's password)
+}}}
