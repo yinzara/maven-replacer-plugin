@@ -14,4 +14,5 @@
 Commands to build and deploy to staging OSS Sonatype:
 {{{
 mvn clean release:prepare -B -Dgpg.passphrase=(project owner's password)
+mvn release:perform -Dgpg.passphrase=(project owner's password)
 }}}
