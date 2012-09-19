@@ -6,7 +6,7 @@
 ===Parameters used in any execution===
 <table border="1" width="800" cellpadding="5">
 <tr>
-<th width="100">Parameter</th><th width="300">Required</th><th>Description</th>
+<th width="200">Parameter</th><th width="300">Required</th><th>Description</th>
 </tr>
 <tr>
 <td>phase</td><td>no (default: compile)</td><td>The desired phase can easily be redefined here. Typically used phases are: compile, test and prepare-package.</td></tr>
@@ -29,7 +29,7 @@
 ===Selecting which files to perform replacements upon===
 <table border="1" width="800" cellpadding="5">
 <tr>
-<th width="100">Parameter</th><th width="300">Required</th><th>Description</th>
+<th width="200">Parameter</th><th width="300">Required</th><th>Description</th>
 </tr>
 <tr>
 <td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
@@ -58,7 +58,7 @@ Note: You must either supply a file, or list of includes (excludes are optional)
 ===Parameters for replacing text===
 <table border="1" width="800" cellpadding="5">
 <tr>
-<th width="100">Parameter</th><th width="300">Required</th><th>Description</th>
+<th width="200">Parameter</th><th width="300">Required</th><th>Description</th>
 </tr>
 <tr>
 <td>token</td><td>(see note below)</td><td>The text to replace within the given file. This may or may not be a regular expression (see regex notes above).</td></tr>
