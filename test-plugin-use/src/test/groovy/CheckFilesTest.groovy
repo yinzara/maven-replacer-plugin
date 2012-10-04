@@ -37,6 +37,7 @@ class CheckFilesTest {
 		checkForTokensAndValues "target/classes/file1"
 		checkForTokensAndValues "target/classes/file2"
 		checkForTokensAndValues "target/classes/outdir/simple.txt"
+		checkForTokensAndValues "target/classes/simple-absolute.txt"
 		checkForTokensAndValues "target/classes/linematch.txt", "replace=token", "replace=value"
 		checkForTokensAndValues "target/classes/special/variableTokenValueMap.txt", "token1", "value1"
 		checkForTokensAndValues "target/classes/special/variableTokenValueMap.txt", "token2", "value2"

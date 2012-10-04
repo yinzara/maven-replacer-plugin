@@ -89,6 +89,19 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>using-project-output-prop</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>${project.build.directory}/classes/simple.txt</file>
+							<token>token</token>
+							<value>value</value>
+							<outputFile>${project.build.directory}/classes/simple-absolute.txt</outputFile>
+						</configuration>
+					</execution>
+					<execution>
 						<id>timestamped</id>
 						<phase>process-test-resources</phase>
 						<goals>
