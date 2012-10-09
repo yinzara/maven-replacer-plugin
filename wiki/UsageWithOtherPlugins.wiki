@@ -50,7 +50,9 @@ Use the following war plugin configuration to allow the files to be modified bef
 </plugin>
 }}}
 Otherwise use {{{<useCache>true</useCache>}}} for the war plugin 2.1.0+ configuration.
+
 ---- 
+
 Sometimes there is issues caused by other post build steps. Here is a complete example which works in most cases for including a build number:
 {{{
 <plugin>
