@@ -11,7 +11,7 @@ Fortunately, we can invoke war:exploded to copy these resources earlier in the b
 ...
 <plugin>
     <groupId>com.google.code.maven-replacer-plugin</groupId>
-    <artifactId>maven-replacer-plugin</artifactId>
+    <artifactId>replacer</artifactId>
     <version>(version)</version>
     <executions>
         <execution>
@@ -50,3 +50,68 @@ Use the following war plugin configuration to allow the files to be modified bef
 </plugin>
 }}}
 Otherwise use {{{<useCache>true</useCache>}}} for the war plugin 2.1.0+ configuration.
+
+Sometimes there is issues caused by other post build steps. Here is a complete example which works in most cases for including a build number:
+{{{
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>buildnumber-maven-plugin</artifactId>
+    <version>1.0</version>
+    <executions>
+        <execution>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>create</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <doCheck>false</doCheck>
+        <doUpdate>false</doUpdate>
+    </configuration>
+</plugin>
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>2.1.1</version>
+    <executions>
+        <execution>
+            <id>prepare-war</id>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>exploded</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>default-war</id>
+            <phase>package</phase>
+            <goals>
+                <goal>war</goal>
+            </goals>
+            <configuration>
+                <warSourceDirectory>${project.build.directory}/${project.build.finalName}</warSourceDirectory>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+
+<plugin>
+    <groupId>com.google.code.maven-replacer-plugin</groupId>
+    <artifactId>replacer</artifactId>
+    <version>(version)</version>
+    <executions>
+        <execution>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>replace</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <file>target/${project.build.finalName}/WEB-INF/YOUR_FILE</file>
+        <token>YOUR_FILES_TOKEN</token>
+        <value>${buildNumber}</value>
+    </configuration>
+</plugin>
+}}}
