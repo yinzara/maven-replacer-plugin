@@ -6,11 +6,11 @@
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
 === 1.5.2 - November 17th, 2012 ===
-  * Issue 71
-  * Issue 72
-  * Issue 74
-  * Issue 75
-  * Issue 77
+  * Updated copyright date (Issue 71)
+  * Added help goal (Issue 72)
+  * Fixed default values (Issue 74)
+  * Fixed use of project.build.outputDirectory property (Issue 75)
+  * Added skip goal (Issue 77)
 
 === 1.5.1 - September 18th, 2012 ===
   * Fixed using project source encoding property as default encoding. (Issue 68).
