@@ -5,6 +5,13 @@
 
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
+=== 1.5.2 - November 17th, 2012 ===
+  * Issue 71
+  * Issue 72
+  * Issue 74
+  * Issue 75
+  * Issue 77
+
 === 1.5.1 - September 18th, 2012 ===
   * Fixed using project source encoding property as default encoding. (Issue 68).
   * Fixed input and output file encodings being missed with some configurations. (Issue 70).
