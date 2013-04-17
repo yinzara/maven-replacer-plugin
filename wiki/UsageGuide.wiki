@@ -102,7 +102,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         ...
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
-            <artifactId>maven-replacer-plugin</artifactId>
+            <artifactId>replacer</artifactId>
             <version>(version)</version>
             <executions>
                 <execution>
@@ -135,7 +135,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         ...
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
-            <artifactId>maven-replacer-plugin</artifactId>
+            <artifactId>replacer</artifactId>
             <version>(version)</version>
             <executions>
                 <execution>
@@ -167,7 +167,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         ...
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
-            <artifactId>maven-replacer-plugin</artifactId>
+            <artifactId>replacer</artifactId>
             <version>(version)</version>
             <executions>                
                 <execution>
@@ -200,7 +200,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         ...
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
-            <artifactId>maven-replacer-plugin</artifactId>
+            <artifactId>replacer</artifactId>
             <version>(version)</version>
             <executions>                
                 <execution>
@@ -227,7 +227,7 @@ Complete examples can be found in the plugin's test utility. http://code.google.
         ...
         <plugin>
             <groupId>com.google.code.maven-replacer-plugin</groupId>
-            <artifactId>maven-replacer-plugin</artifactId>
+            <artifactId>replacer</artifactId>
             <version>(version)</version>
             <executions>                
                 <execution>
