@@ -16,7 +16,7 @@
 <td>outputDir</td><td>no</td><td>Destination directory relative to the baseDir for all replaced files to be written to.</td></tr>
 <tr>
 <td>outputBasedir</td><td>no</td><td>Destination directory relative to the execution directory for all replaced files to be written to. Use with outputDir to have files written to a specific base location.</td></tr>
-<td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
+<tr><td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
 <tr>
 <td>preserveDir</td><td>no (default: true)</td><td>Preserve the directory structure of files found with the includes parameter when writing to the outputDir.</td></tr>
 <tr>
