@@ -27,6 +27,8 @@ class CheckFilesTest {
 		new File("target/classes").eachFileMatch(~/.*\.txt/) { checkForTokensAndValues it.getPath() }
 		checkForTokensAndValues "target/classes/nesteddir/multiple-files1.txt"
 		checkForTokensAndValues "target/classes/nesteddir/multiple-files2.txt"
+		checkForTokensAndValues "target/classes/nesteddir-for-abs/multiple-files1.txt"
+		checkForTokensAndValues "target/classes/nesteddir-for-abs/multiple-files2.txt"
 		checkForTokensAndValues "target/simple-outputfile-remove.txt", "token", ""
 		checkForTokensAndValues "target/multiple-tokens-for-map-outputfile.txt", "token1", "value1"
 		checkForTokensAndValues "target/multiple-tokens-for-map-outputfile.txt", "token2", "value2"

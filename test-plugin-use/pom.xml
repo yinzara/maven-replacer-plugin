@@ -353,6 +353,20 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>multiple-files-with-abs-path</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>${project.build.directory}/**/nesteddir-for-abs/multiple-files*.txt</include>
+							</includes>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
+					<execution>
 						<id>multiple-files-to-outdir</id>
 						<phase>process-test-resources</phase>
 						<goals>
