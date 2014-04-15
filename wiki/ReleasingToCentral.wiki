@@ -7,7 +7,7 @@
 
  * Usage of GnuPG: [http://www.sonatype.com/people/2010/01/how-to-generate-pgp-signatures-with-maven/]
 
- * Public key name at hkp://pgp.mit.edu - 20D4B148.
+ * Public key name at hkp://pgp.mit.edu - A08C6B0A.
 
  * Use oss.sonatype.org for Nexus Central sync
 
