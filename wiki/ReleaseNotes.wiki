@@ -5,6 +5,13 @@
 
 Note: For more details on each item, please see its Issue or the UsageGuide.
 
+=== 1.5.3 - April 16th, 2014 ===
+  * Fixed base directory being null from default value. This was preventing absolute paths being used to locate files to replace (Issue 69)
+  * Fixed default values (Issue 85)
+  * Added warning message when not enough parameters (Issue 90)
+  * Added licence to releases (Issue 84)
+  * Added maxReplacements property (Issue 86)
+
 === 1.5.2 - November 17th, 2012 ===
   * Updated copyright date (Issue 71)
   * Added help goal (Issue 72)
