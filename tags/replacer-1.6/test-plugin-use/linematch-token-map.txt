@@ -1,3 +1,0 @@
-﻿
-
-^replace\=.*=replace=value
