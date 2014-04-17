@@ -16,7 +16,7 @@
 <td>outputDir</td><td>no</td><td>Destination directory relative to the baseDir for all replaced files to be written to.</td></tr>
 <tr>
 <td>outputBasedir</td><td>no</td><td>Destination directory relative to the execution directory for all replaced files to be written to. Use with outputDir to have files written to a specific base location.</td></tr>
-<tr><td>basedir</td><td>no</td><td>Path to base relative files for replacements from. (Default "." which is the default Maven basedir). This feature is useful for multi-module projects.</td></tr>
+<tr><td>basedir</td><td>no</td><td>Path to base relative files for replacements from. This feature is useful for multi-module projects.</td></tr>
 <tr>
 <td>preserveDir</td><td>no (default: true)</td><td>Preserve the directory structure of files found with the includes parameter when writing to the outputDir.</td></tr>
 <tr>
@@ -31,7 +31,7 @@
 <th width="200">Parameter</th><th width="300">Required</th><th>Description</th>
 </tr>
 <tr>
-<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) </td></tr>
+<td>includes:include</td><td>(see note below)</td><td>List of files to include for multiple (or single) replacement. In Ant format (`*`/directory/`*``*`.properties) and works in conjunction with basedir. Note: There is no longer a default for basedir and this must be an absolute path if not using a basedir. </td></tr>
 <tr>
 <td>excludes:exclude</td><td>no</td><td>List of files to exclude (must have some includes) for multiple (or single) replacement. In Ant format (`*``*`/directory/do-not-replace.properties). The files replaced will be derived from the list of includes and excludes. Files not found are ignored by default.</td></tr>
 <tr>
