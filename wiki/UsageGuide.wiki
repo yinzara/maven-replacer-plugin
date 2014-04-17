@@ -23,6 +23,8 @@
 <td>quiet</td><td>no (default: false)</td><td>Stops printing a summary of files that have had replacements performed upon them when true.</td></tr>
 <tr>
 <td>ignoreErrors</td><td>no (default: false)</td><td>Ignore any errors with missing files or any other exceptions caused by this plugin. The Maven build will continue and log an error if ignoreErrors is set to true and an error occurs.</td></tr>
+<tr>
+<td>maxReplacements</td><td>no</td><td>Maximum number of files allowed for replacements.</td></tr>
 </table>
 
 ===Selecting which files to perform replacements upon===
