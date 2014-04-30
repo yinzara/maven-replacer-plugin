@@ -433,6 +433,20 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>xpath-with-text-selector</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/classes/xpath.xml</file>
+							<outputFile>target/xpath-out-text-selector.xml</outputFile>
+							<xpath>//firstname/text()</xpath>
+							<token>token</token>
+							<value>value</value>
+						</configuration>
+					</execution>
+					<execution>
 						<id>xpath</id>
 						<phase>process-test-resources</phase>
 						<goals>

@@ -47,6 +47,7 @@ class CheckFilesTest {
 		checkForTokensAndValues "target/classes/timestamped.toReplace", "project.version", "0.0.1-SNAPSHOT"
 		checkForTokensAndValues "target/outputBasedir/outdir/simple.txt"
 		checkForTokensAndValues "target/xpath-out.xml"
+		checkForTokensAndValues "target/xpath-out-text-selector.xml"
 		checkForTokensAndValues "target/xpath-in-replacements-out.xml"
 		checkForTokensAndValues "target/classes/simple.txt.output"
 		checkForTokensAndValues "/tmp/simple.txt"
